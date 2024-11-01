@@ -18,7 +18,7 @@ jobs:
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.0' # specify PHP version (adjust as needed)
+          php-version: '7.4' # specify PHP version (adjust as needed)
           extensions: mbstring, pdo # specify any additional PHP extensions
 
       - name: Validate composer.json and composer.lock
