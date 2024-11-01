@@ -36,7 +36,6 @@ try {
 }
 ?>
 
-?>
 <!DOCTYPE html>
 <html lang="nl">
 <head>
