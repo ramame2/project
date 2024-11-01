@@ -33,6 +33,7 @@ if (!isset($_SESSION['user_id'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Mijnportfolio</title>
+    <link rel="icon" href="my.ico" type="image/x-icon">
     <style>
 
      h1{
