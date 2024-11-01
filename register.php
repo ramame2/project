@@ -36,7 +36,6 @@ try {
 }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -118,6 +117,26 @@ try {
         }
 
     </style>
+    <style>
+        /* Existing CSS styles */
+        body { /* styles */ }
+        .container { /* styles */ }
+        input, button { /* styles */ }
+        button:hover { /* styles */ }
+        a { /* styles */ }
+        h1 { /* styles */ }
+        @media screen and (max-width: 500px) { /* styles */ }
+
+        /* New style for the message box */
+        #message {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 4px;
+            display: none; /* Hidden by default */
+        }
+        #message.success { background-color: #28a745; color: white; }
+        #message.error { background-color: #dc3545; color: white; }
+    </style>
 </head>
 <body>
 <div class="container">
@@ -132,37 +151,37 @@ try {
         <button type="submit">Registreren</button>
     </form>
     <p>Al een account? <a href="login.php">Log hier in</a>.</p>
-</div>
 
-<script>
-    document.getElementById('registrationForm').addEventListener('submit', async function(event) {
-        event.preventDefault(); // Prevent form from submitting the traditional way
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', async function(event) {
+            event.preventDefault(); // Prevent form from submitting the traditional way
 
-        const formData = new FormData(this);
-        const messageBox = document.getElementById('message');
+            const formData = new FormData(this);
+            const messageBox = document.getElementById('message');
 
-        try {
-            const response = await fetch('register.php', {
-                method: 'POST',
-                body: formData
-            });
+            try {
+                const response = await fetch('register.php', {
+                    method: 'POST',
+                    body: formData
+                });
 
-            const result = await response.json();
-            messageBox.style.display = 'block'; // Show message box
+                const result = await response.json();
+                messageBox.style.display = 'block'; // Show message box
 
-            if (result.status === 'success') {
-                messageBox.className = 'success';
-            } else {
+                if (result.status === 'success') {
+                    messageBox.className = 'success';
+                } else {
+                    messageBox.className = 'error';
+                }
+                messageBox.textContent = result.message;
+
+            } catch (error) {
                 messageBox.className = 'error';
+                messageBox.style.display = 'block';
+                messageBox.textContent = 'Er ging iets mis. Probeer het opnieuw.';
             }
-            messageBox.textContent = result.message;
-
-        } catch (error) {
-            messageBox.className = 'error';
-            messageBox.style.display = 'block';
-            messageBox.textContent = 'Er ging iets mis. Probeer het opnieuw.';
-        }
-    });
-</script>
+        });
+    </script>
+</div>
 </body>
 </html>
