@@ -3,12 +3,6 @@ $servername = "sql211.infinityfree.com";
 $username = "if0_37327165";
 $password = "edKK6Cnyx66e";
 $dbname = "if0_37327165_rama";
-<?php
-// Database connection details
-$servername = "localhost";
-$username = "rama";
-$password = "";
-$dbname = "rama";
 
 try {
     // Create a PDO connection
