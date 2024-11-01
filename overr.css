@@ -1,0 +1,32 @@
+body{background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYs47mjGdrhwLth_2wBWsGl4qIfznRVz290w&s); background-repeat:inherit; background-size: cover;}
+
+.Rama{
+
+    width:auto;
+    background-size: cover;
+    background-position: 100%;
+    height: 120px; margin-top: 0px;
+}
+h1{margin-left: 650px; font-weight: bolder; font-size: 40px; margin-top: 50px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
+.d2{width: 300px;height: 450px; display: grid; grid-template-rows: auto auto auto auto; gap: 20px; margin-left: 600px; margin-top: 10px; border-radius: 20px;}
+#myButton{font-size: x-large; background-color: rgb(166, 160, 243); border: 2px rgb(11, 11, 11) solid; border-radius: 20px;}
+#myButton2{font-size: x-large;background-color: rgb(166, 160, 243) ;border: 2px rgb(11, 11, 10) solid; border-radius: 20px;} 
+
+#myButton3{font-size: x-large;background-color: rgb(166, 160, 243);border: 2px rgb(10, 10, 10) solid; border-radius: 20px;}
+#myButton4{font-size: x-large;background-color: rgb(166, 160, 243);border: 2px rgb(10, 10, 10) solid; border-radius: 20px;}
+#myButton5{font-size: x-large;background-color: rgb(95, 137, 162);border: 2px rgb(8, 8, 8) solid; border-radius: 20px;}
+.hide{display: none;}
+.hide2{display: none;} 
+.hide3{display: none;} 
+.hide4{display: none;} 
+.hide5{display: none;} 
+#popup{font-size: larger; background-color: rgb(168, 133, 157);  border: 2px solid white; border-radius: 10px;}
+#popup2{font-size: larger; background-color: rgb(168, 133, 157);  border: 2px solid white; border-radius: 10px;}
+#popup3{font-size: larger; background-color: rgb(168, 133, 157);  border: 2px solid white; border-radius: 10px;}
+#popup4{font-size: larger; background-color: rgb(168, 133, 157);  border: 2px solid white; border-radius: 10px;}
+#popup5{font-size: larger; background-color:rgb(168, 133, 157);  border: 2px solid white; border-radius: 10px;}
+#myButton:hover{background-color:rgb(221, 165, 188) ;}
+#myButton2:hover{background-color:rgb(221, 165, 188) ;}
+#myButton3:hover{background-color:rgb(221, 165, 188) ;}
+#myButton4:hover{background-color:rgb(1221, 165, 188) ;}
+#myButton5:hover{background-color:rgb(221, 165, 188) ;}
