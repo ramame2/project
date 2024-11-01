@@ -23,6 +23,7 @@ $result = $conn->query($sql);
     <meta name="viewport" content="width=
     , initial-scale=1.0">
     <title>Contact</title>
+    <link rel="icon" href="my.ico" type="image/x-icon">
     <link rel="stylesheet" href="contactt.css">
     
 </head>
