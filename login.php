@@ -43,6 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="portfolio.css">
     <title>Inloggen</title>
+    <link rel="icon" href="my.ico" type="image/x-icon">
     <style>
         body {
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
