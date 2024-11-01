@@ -1,0 +1,9 @@
+{
+  "name": "ramame2/myportfolio",
+  "description": "test my project",
+  "require": {
+    "php": "^7.4",
+    "ext-mbstring": "*",
+    "ext-pdo_mysql": "*"
+  }
+}
