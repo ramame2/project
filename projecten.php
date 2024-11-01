@@ -31,20 +31,19 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Fetch project descriptions
 $sql = "SELECT * FROM project_descriptions";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    // Output each project description with a button in a ladder layout
-    $projectNumber = 1; // To label each button uniquely
+
+    $projectNumber = 1;
     echo "<div class='project-ladder'>";
     while ($row = $result->fetch_assoc()) {
         echo "<div class='project'>";
         echo "<h2>" . htmlspecialchars($row['project_title']) . "</h2>";
         echo "<p>" . htmlspecialchars($row['description']) . "</p>";
 
-        // Add button with specific action for Project 1
+        
         if ($projectNumber === 1) {
             echo "<button class='project-btn' onclick='window.location.href=\"game.php\"'>Project 1</button>";
         } else {
