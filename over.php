@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Over - Rama Mari</title>
+    <link rel="icon" href="my.ico" type="image/x-icon">
     <style>
         :root {
             --bg-color-light: #f0f0f0; --text-color-light: #333;
