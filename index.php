@@ -42,7 +42,7 @@ if (!isset($_SESSION['user_id'])) {
      h2{
          font-size: x-large;}
      body{
-         background-image:url(https://img.freepik.com/free-vector/abstract-blue-light-pipe-speed-zoom-black-background-technology_1142-9530.jpg);
+         background-image:url(bb.jpg);
          background-repeat:repeat;
          background-size:cover;}
 
@@ -53,8 +53,8 @@ if (!isset($_SESSION['user_id'])) {
 
      h1{
          font-size: 4rem;
-         margin-left: 30.5rem; margin-top: 0.5rem;
-         color: #e6dcdc;
+         margin-left: 30.5rem; margin-top: 3rem;
+         color: #30737e;
          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
 
 
@@ -76,12 +76,12 @@ if (!isset($_SESSION['user_id'])) {
          gap: 0.5rem;; margin-top: 3rem;}
 
      img{
-         width:21rem; height: 26rem;
-         border-radius: 10rem;
-         margin-left: 3rem; margin-bottom: 1rem;}
+         width:21rem; height: 23rem;
+         border-radius: 7rem;
+         margin-left: 3rem; margin-top:  0.1rem;}
 
      p{
-         font-size:large ; color: antiquewhite;
+         font-size:1.1rem; color: antiquewhite;
          width: 3rem; inline-size: 60rem; margin-right: 30px;
          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
 
@@ -119,7 +119,7 @@ if (!isset($_SESSION['user_id'])) {
 
      .sociaal{
          width: 2rem; height: 2rem;
-          margin-top: 8rem;
+          margin-top: 6rem;
          margin-bottom: 1rem;
          display: flex; justify-content: space-between;
          gap: 0.05rem;padding: 10px;}
@@ -153,34 +153,49 @@ if (!isset($_SESSION['user_id'])) {
 
      }
 
-     @media screen and (min-width: 320px) and (max-width: 1024px) {
-         h1 {
-             font-size: 2.5rem; margin-left: 1rem; text-align: center;
-         }
 
-         .container1 {flex-direction: column; align-items: center;
-         }
+         @media screen and (min-width: 320px) and (max-width: 768px) {
 
-         .items { flex-direction: column; align-items: center; margin-right: 0;gap: 0.5rem;
+             h1 {
+                 font-size: 2.5rem;
+                 margin-left: 1rem;
+                 text-align: center;
+             }
+             .container1 {
+                 flex-direction: column;
+                 align-items: center;
+             }
+             .items {
+                 flex-direction: column;
+                 align-items: center;
+                 margin-right: 1rem;
+                 gap: 0.5rem;
+                 ma
+             }
+             .container2 {
+                 grid-template-columns: 1fr;
+             }
+             img {
+                 width: 100%;
+                 height: auto;
+                 max-width: 15rem;
+                 border-radius: 4rem;
+                 margin: 0 auto;
+             }
+             .contact-info {
+                 margin: 1rem auto;
+                 text-align: center;
+             }
+             p {
+                 font-size: 1rem;
+                 margin: 0 1rem;
+             }
+             button {
+                 width: 100%;
+                 max-width: 200px;
+                 margin: 0.5rem auto;
+             }
          }
-
-         .container2 {
-             grid-template-columns: 1fr;
-         }
-
-         img {width: 100%; height: auto; max-width: 15rem;
-             border-radius: 5rem; margin: 0 auto;
-         }
-
-         .contact-info { margin: 1rem auto; text-align: center;
-         }
-
-         p {font-size: 1rem; margin: 0 1rem;
-         }
-
-         button {width: 100%; max-width: 200px;margin: 0.5rem auto;
-         }
-     }
     </style>
 
 
@@ -235,7 +250,7 @@ if (!isset($_SESSION['user_id'])) {
 
         <div class="contact-info">
             <p>Email: <a href="mailto:eng.rama.me@gmail.com">eng.rama.me@gmail.com</a></p>
-            <p>Telefoonnummer: <a href="tel:06*******">06*******</a></p>
+            <p>Telefoonnummer: <a href="tel:06*******">06*********</a></p>
         </div>
     </footer>
 

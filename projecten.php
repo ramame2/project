@@ -43,7 +43,7 @@ if ($result->num_rows > 0) {
         echo "<h2>" . htmlspecialchars($row['project_title']) . "</h2>";
         echo "<p>" . htmlspecialchars($row['description']) . "</p>";
 
-        
+
         if ($projectNumber === 1) {
             echo "<button class='project-btn' onclick='window.location.href=\"game.php\"'>Project 1</button>";
         } else {
