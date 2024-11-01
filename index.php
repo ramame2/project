@@ -8,7 +8,7 @@ if (!isset($_SESSION['user_id'])) {
 
         <?php
 
-        $servername = "sql211.infinityfree.com";
+        $servername = "sql211.infinityfree.co";
         $username = "if0_37327165";
         $password = "edKK6Cnyx66e";
         $dbname = "if0_37327165_rama";
