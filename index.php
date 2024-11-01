@@ -8,7 +8,7 @@ if (!isset($_SESSION['user_id'])) {
 
         <?php
 
-        $servername = "sql211.infinityfree.co";
+        $servername = "sql211.infinityfree.com";
         $username = "if0_37327165";
         $password = "edKK6Cnyx66e";
         $dbname = "if0_37327165_rama";
@@ -235,7 +235,7 @@ if (!isset($_SESSION['user_id'])) {
 
         <div class="contact-info">
             <p>Email: <a href="mailto:eng.rama.me@gmail.com">eng.rama.me@gmail.com</a></p>
-            <p>Telefoonnummer: <a href="tel:0685344454">0685344454</a></p>
+            <p>Telefoonnummer: <a href="tel:06*******">06*******</a></p>
         </div>
     </footer>
 
