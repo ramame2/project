@@ -3,38 +3,39 @@ $servername = "sql211.infinityfree.com";
 $username = "if0_37327165";
 $password = "edKK6Cnyx66e";
 $dbname = "if0_37327165_rama";
+
 try {
     // Create a PDO connection
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $username = htmlspecialchars($_POST['username']);
+        $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+        // Check if username already exists
+        $stmt = $conn->prepare("SELECT COUNT(*) FROM users WHERE username = :username");
+        $stmt->bindParam(':username', $username);
+        $stmt->execute();
+        $userExists = $stmt->fetchColumn();
+
+        if ($userExists) {
+            echo "Username already exists. Please choose a different username.";
+        } else {
+            // Insert new user
+            $stmt = $conn->prepare("INSERT INTO users (username, password) VALUES (:username, :password)");
+            $stmt->bindParam(':username', $username);
+            $stmt->bindParam(':password', $password);
+            $stmt->execute();
+
+            echo "Registration successful!";
+        }
+    }
 } catch (PDOException $e) {
     die("Connection failed: " . $e->getMessage());
 }
-
-// Handle form submission
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Check if 'username' and 'password' are set in $_POST
-    if (isset($_POST['username']) && isset($_POST['password'])) {
-        $username = trim($_POST['username']); // Sanitize username
-        $password = password_hash(trim($_POST['password']), PASSWORD_DEFAULT); // Hash and sanitize password
-
-        // Prepare SQL statement
-        $stmt = $conn->prepare("INSERT INTO users (username, password) VALUES (:username, :password)");
-        $stmt->bindParam(':username', $username);
-        $stmt->bindParam(':password', $password);
-
-        // Execute the statement and check for success
-        if ($stmt->execute()) {
-            echo "Registration successful! You can now log in.";
-        } else {
-            echo "Error: Could not register the user.";
-        }
-    } else {
-        echo "Please provide both username and password.";
-    }
-}
-
 ?>
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>
