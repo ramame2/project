@@ -71,7 +71,7 @@ try {
             background-color:cadetblue;
             color: #fff;
             border: none;
-            padding: 10px;
+            padding: 8px;
             border-radius: 4px;
             cursor: pointer;
         }
