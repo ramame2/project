@@ -4,9 +4,7 @@ if (!isset($_SESSION['user_id'])) {
     header("Location: login.php"); // Redirect to login if not logged in
     exit;
 }
-?>
 
-        <?php
 
         $servername = "sql211.infinityfree.com";
         $username = "if0_37327165";
@@ -21,244 +19,187 @@ if (!isset($_SESSION['user_id'])) {
             die("Connection failed: " . $e->getMessage());
         }
 
-
 ?>
-</html>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Mijnportfolio</title>
+    <title>Mijn Portfolio</title>
     <link rel="icon" href="my.ico" type="image/x-icon">
     <style>
-
-     h1{
-         font-size: 3rem;
-     margin-left: 33rem}
-     h2{
-         font-size: x-large;}
-     body{
-         background-image:url(bb.jpg);
-         background-repeat:repeat;
-         background-size:cover;}
-
-     .container1
-     {width:100%; height: 6rem; display:flex;
-         justify-content: space-between; position:relative;
-         row-gap: 4rem;}
-
-     h1{
-         font-size: 4rem;
-         margin-left: 30.5rem; margin-top: 3rem;
-         color: #30737e;
-         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
-
-
-     h2{
-         margin-left: 2rem;
-         font-size: larger; position:relative;
-         color: antiquewhite;
-         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-     }
-
-     .items{
-         margin-top:2rem; margin-right: -22rem;
-         display: flex; justify-content: space-between;
-         gap: 50px; font-size: large; color: black; position:initial;}
-
-     .container2{
-         width: 100%;display: grid;
-         grid-template-columns: auto auto auto;
-         gap: 0.5rem;; margin-top: 3rem;}
-
-     img{
-         width:21rem; height: 23rem;
-         border-radius: 7rem;
-         margin-left: 3rem; margin-top:  0.1rem;}
-
-     p{
-         font-size:1.1rem; color: antiquewhite;
-         width: 3rem; inline-size: 60rem; margin-right: 30px;
-         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
+        body {
+            background-image: url(bb.jpg);
+            background-repeat: repeat;
+            background-size: cover;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            color: #30737e;
+            font-family: Cambria, serif;
+            margin-top: 3rem;
+        }
+        h2 {
+            color: cadetblue;
+            font-family: Cambria, serif;
+            font-size: x-large;
+            text-align: left;
+            margin-top: 1rem;
+            margin-left: 6.8rem;
+        }
+        p {
+            font-size: 1.1rem;
+            color: antiquewhite;
+            text-align: center;
+            padding: 0 1rem;
+            line-height: 1.5;
+            font-family: Cambria, serif;
+        }
+        .container1 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            padding: 1rem 0;
+            flex-wrap: wrap;
+        }
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 1rem;
+        }
 
 
-     .Contact{
-         color: antiquewhite; font-size: x-large;
-         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
+        .items a {
+            font-size: 1.5rem;
+            color: #f0f0f0;
+            font-family: "Lucida Bright";
+            padding: 0.5rem;
+            text-decoration: none;
+            margin-left: 5rem;
+            transition: color 0.3s, background-color 0.3s;
+        }
 
-     .over{
-         color: antiquewhite; font-size: x-large;
-         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
+        .items a:hover {
+            color: #ffffff;
+            background-color: cadetblue; /* Kleur bij hover */
+            border-radius: 0.5rem;
+        }
 
-     .projecten{
-         color: antiquewhite; font-size: x-large;
-         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
+        .items a:hover {
+            color: cadetblue;
+        }
+        .container2 {
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-items: center;
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+        img {
+            width: 80%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 2rem;
+            margin-top: 1rem;
+        }
+        .sociaal {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .sociaal img {
+            width: 35px;
+            height: 35px;
+        }
+        .contact-info {
+            text-align: center;
+            color: #ffffff;
+            font-family: Cambria, serif;
+            padding: 1rem 0;
+        }
+        .contact-info a {
+            color: cadetblue;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        button {
+            width: 100px;
+            margin: 1rem auto;
+            display: block;
+            border-radius: 2rem;
+            padding: 0.5rem;
+            font-size: 1rem;
+            background-color: #ffffff;
+            border: solid 1px cadetblue;
+            color: #30737e;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #30737e;
+            color: #ffffff;
+        }
 
-
-
-     button{
-         width: 7rem; margin-left: 1.8rem;
-         border-radius: 2rem; height: 2rem;}
-
-     button:hover{
-         cursor: pointer;}
-
-
-     h2{
-         margin-left: 0.1rem; font-size: x-large;
-         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: cadetblue;}
-
-     .text{
-         margin-left: 2rem;
-         margin-top: 2.3rem;}
-
-
-     .sociaal{
-         width: 2rem; height: 2rem;
-          margin-top: 6rem;
-         margin-bottom: 1rem;
-         display: flex; justify-content: space-between;
-         gap: 0.05rem;padding: 10px;}
-
-     .face{
-         width: 35px;height: 35px;}
-
-     .insta{
-         width: 35px;height: 35px;}
-
-     .linked{
-         width: 35px;height: 35px}
-
-     .tik{
-         width: 35px;height: 35px}
-
-     .contact-info {
-         text-align: center;
-         color: #ffffff;
-         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-         margin-left: 11rem;
-     }
-
-     .contact-info a {
-         color: cadetblue; text-decoration: none;
-         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-         font-size: 1rem;
-     }
-     .contact-info a:hover {
-         text-decoration:underline;
-
-     }
-
-
-         @media screen and (min-width: 320px) and (max-width: 768px) {
-
-             h1 {
-                 font-size: 2.5rem;
-                 margin-left: 1rem;
-                 text-align: center;
-             }
-             .container1 {
-                 flex-direction: column;
-                 align-items: center;
-             }
-             .items {
-                 flex-direction: column;
-                 align-items: center;
-                 margin-right: 1rem;
-                 gap: 0.5rem;
-                 ma
-             }
-             .container2 {
-                 grid-template-columns: 1fr;
-             }
-             img {
-                 width: 100%;
-                 height: auto;
-                 max-width: 15rem;
-                 border-radius: 4rem;
-                 margin: 0 auto;
-             }
-             .contact-info {
-                 margin: 1rem auto;
-                 text-align: center;
-             }
-             p {
-                 font-size: 1rem;
-                 margin: 0 1rem;
-             }
-             button {
-                 width: 100%;
-                 max-width: 200px;
-                 margin: 0.5rem auto;
-             }
-         }
+        @media screen and (min-width: 768px) {
+            .container2 {
+                grid-template-columns: auto auto;
+                gap: 2rem;
+                max-width: 80%;
+                margin: 0 auto;
+            }
+            h1 {
+                font-size: 4rem;
+                margin-top: 2rem;
+            }
+            p {
+                font-size: 1.2rem;
+            }
+        }
     </style>
-
-
 </head>
 <body>
 <header>
-<div class="container1">
-
- <h1><strong>Rama Mari</strong></h1>
-
-
-
-
-<div class="items">
-    <a  class="Contact" href="me2.php" target="_blank"><strong>Contact</strong></a>
-    <a class="over" href="over.php" target="_blank"></strong>Over<strong></a>
-    <a class="projecten"  href="projecten.php" target="_blank"><strong>Projecten</strong></a>
-</div>
-</div>
-
+    <div class="container1">
+        <h1>Rama Mari</h1>
+    </div>
+    <div class="items">
+        <a class="Contact" href="me2.php" target="_blank">Contact</a>
+        <a class="over" href="over.php" target="_blank">Over</a>
+        <a class="projecten" href="projecten.php" target="_blank">Projecten</a>
+    </div>
 </header>
+
 <div class="container2">
-    <img src="rm.jpg" alt="">
-
-
-<div class="text">
-<h2>Hello,<br>
-    welcome in my portfolio</h2>
- <br> <p>Ik ben Rama Mari, en dit is mijn portfolio.<br>
-        Ik ben iemand die van het leven houdt, ambitieus <br>
-        is, serieus is in mijn alle taken en werk, en ik hou  ervan <br>
-        om al mijn taken op de tijd af te ronden. Het productiviteit <br>
-        verhoogt eigenlijk altijd mijn geluksgevoel en positieve energie.</p>
-
-
-        <div class="sociaal">
-    <a href="https://www.facebook.com/engrama.merea" target="_blank"><img class="face" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSskbpEX-jqvW2ZslvzHgvtEKykib-oCRvCPA&s" alt="" ></a>
-    <a href="https://www.linkedin.com/legal/professional-community-policies?openinweb=true"><img class="linked" src="https://banner2.cleanpng.com/20180417/ifw/avfn2u8al.webp" alt=""></a>
-    <a href=""><img class="insta" src="https://w7.pngwing.com/pngs/910/192/png-transparent-instagram-instagram-new-design-liner-round-social-media-instagram-new-icon.png" alt=""></a>
-    <a href="https://www.tiktok.com/@roro.mari22?_t=8q5sxdJ7iMd&_r=1" target="_blank"><img class="tik" src="https://w7.pngwing.com/pngs/483/249/png-transparent-tiktok-icon-thumbnail.png" alt=""></a>
-
+    <img src="rm.jpg" alt="Rama Mari">
+    <div class="text">
+        <h2>Hello, welcome to my portfolio</h2>
+        <p>Ik ben Rama Mari, en dit is mijn portfolio. Ik hou van leven, ben ambitieus , serieus in mijn taken en werk, en ik hou ervan om al mijn taken op tijd af te ronden. Productiviteit verhoogt altijd mijn geluksgevoel en positieve energie.</p>
+    </div>
+    <div class="sociaal">
+        <a href="https://www.facebook.com/engrama.merea" target="_blank"><img class="face" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSskbpEX-jqvW2ZslvzHgvtEKykib-oCRvCPA&s" alt="Facebook"></a>
+        <a href="https://www.linkedin.com/legal/professional-community-policies?openinweb=true"><img class="linked" src="https://banner2.cleanpng.com/20180417/ifw/avfn2u8al.webp" alt="LinkedIn"></a>
+        <a href="#"><img class="insta" src="https://w7.pngwing.com/pngs/910/192/png-transparent-instagram-instagram-new-design-liner-round-social-media-instagram-new-icon.png" alt="Instagram"></a>
+        <a href="https://www.tiktok.com/@roro.mari22?_t=8q5sxdJ7iMd&_r=1" target="_blank"><img class="tik" src="https://w7.pngwing.com/pngs/483/249/png-transparent-tiktok-icon-thumbnail.png" alt="TikTok"></a>
     </div>
 </div>
 
-
-</div>
-
-
-
-
 <footer>
-
-        <div class="contact-info">
-            <p>Email: <a href="mailto:eng.rama.me@gmail.com">eng.rama.me@gmail.com</a></p>
-            <p>Telefoonnummer: <a href="tel:06*******">06*********</a></p>
-        </div>
-    </footer>
-
+    <div class="contact-info">
+        <p>Email: <a href="mailto:eng.rama.me@gmail.com">eng.rama.me@gmail.com</a></p>
+        <p>Telefoonnummer: <a href="tel:06*******">06*********</a></p>
+    </div>
+</footer>
 
 </body>
 </html>
-
-
 
 
 
