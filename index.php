@@ -21,12 +21,13 @@ if (!isset($_SESSION['user_id'])) {
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mijn Portfolio</title>
     <link rel="icon" href="my.ico" type="image/x-icon">
+</head>
     <style>
         body {
             background-image: url(bb.jpg);
@@ -45,10 +46,10 @@ if (!isset($_SESSION['user_id'])) {
         h2 {
             color: cadetblue;
             font-family: Cambria, serif;
-            font-size: x-large;
+            font-size:2.2rem;
             text-align: left;
             margin-top: 1rem;
-            margin-left: 6.8rem;
+            margin-left: 4.8rem;
         }
         p {
             font-size: 1.1rem;
@@ -57,6 +58,7 @@ if (!isset($_SESSION['user_id'])) {
             padding: 0 1rem;
             line-height: 1.5;
             font-family: Cambria, serif;
+            margin-top: 5rem;
         }
         .container1 {
             width: 100%;
@@ -81,21 +83,22 @@ if (!isset($_SESSION['user_id'])) {
             padding: 2rem 0;
         }
         img {
-            width: 80%;
-            max-width: 300px;
-            height: auto;
-            border-radius: 2rem;
+            width: 95%%;
+            max-width: 400px;
+            height: 93%;
+            border-radius: 8rem;
             margin-top: 1rem;
+            margin-left: -0.5rem;
         }
         .sociaal {
             display: flex;
             justify-content: center;
-            gap: 1rem;
-            margin-top: 1rem;
+            gap: 0.7rem;
+            margin-top: 0rem;
         }
         .sociaal img {
-            width: 35px;
-            height: 35px;
+            width: 25px;
+            height: 25px;
         }
         .contact-info {
             text-align: center;
@@ -127,7 +130,16 @@ if (!isset($_SESSION['user_id'])) {
             background-color: #30737e;
             color: #ffffff;
         }
+        h3{
+    color: cadetblue;
+    font-size: 3.5rem;
+            margin-left: 4rem;
+            font-family: "Arabic Typesetting";
+        }
+        .container3{
 
+            margin-left: 0rem;
+        }
 
         @media screen and (min-width: 768px) {
             .container2 {
@@ -137,7 +149,7 @@ if (!isset($_SESSION['user_id'])) {
                 margin: 0 auto;
             }
             h1 {
-                font-size: 4rem;
+                font-size: 4.5rem;
                 margin-top: 2rem;
             }
             p {
@@ -172,7 +184,7 @@ if (!isset($_SESSION['user_id'])) {
                 padding: 10px 12px;
                 border: none;
                 cursor: pointer;
-                z-index: 1000; /* Keeps the button above other content */
+                z-index: 1000;
                 border-radius: 18px;
                 transition: background-color 0.3s ease;
             }
@@ -186,15 +198,15 @@ if (!isset($_SESSION['user_id'])) {
             .items {
                 display: none;
                 background-color: #fff;
-                position: fixed; /* Fixed position for menu items */
-                top: 60px; /* Slightly below the button */
+                position: fixed;
+                top: 60px;
                 right: 10px;
                 border: 1px solid #ddd;
                 border-radius: 8px;
                 width: 200px;
                 box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-                z-index: 999; /* Keeps menu above other content */
-                overflow: hidden; /* Rounded corners for content */
+                z-index: 999;
+                overflow: hidden;
             }
 
             .items a {
@@ -246,23 +258,38 @@ if (!isset($_SESSION['user_id'])) {
 
     </html>
 
-</header>
+
 
 <div class="container2">
     <img src="rm.jpg" alt="Rama Mari">
     <div class="text">
-        <h2>Hello, welcome to my portfolio</h2>
+        <h2>Hello,<br> welcome to my portfolio</h2>
         <p>Ik ben Rama Mari, en dit is mijn portfolio.<br>
-            Ik hou van leven, ben ambitieus , serieus in mijn taken en werk,<br>
-            en ik hou ervan om al mijn taken op tijd af te ronden. Productiviteit <br>
-            verhoogt altijd mijn geluksgevoel en positieve energie.</p>
+            Ik hou van leven, ben ambitieus , serieus in mijn taken en werk,
+            en ik hou ervan om al mijn taken op tijd af te ronden.<br>
+            Productiviteit verhoogt altijd mijn geluksgevoel en positieve energie.</p>
     </div>
-    <div class="sociaal">
-        <a href="https://www.facebook.com/engrama.merea" target="_blank"><img class="face" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSskbpEX-jqvW2ZslvzHgvtEKykib-oCRvCPA&s" alt="Facebook"></a>
-        <a href="https://www.linkedin.com/legal/professional-community-policies?openinweb=true"><img class="linked" src="https://banner2.cleanpng.com/20180417/ifw/avfn2u8al.webp" alt="LinkedIn"></a>
-        <a href="#"><img class="insta" src="https://w7.pngwing.com/pngs/910/192/png-transparent-instagram-instagram-new-design-liner-round-social-media-instagram-new-icon.png" alt="Instagram"></a>
-        <a href="https://www.tiktok.com/@roro.mari22?_t=8q5sxdJ7iMd&_r=1" target="_blank"><img class="tik" src="https://w7.pngwing.com/pngs/483/249/png-transparent-tiktok-icon-thumbnail.png" alt="TikTok"></a>
+    <div class="container3">
+        <h3> Welke secties bevat mijn portfoilio?</h3>
+        <p class="p2">
+            <strong>Over-pagina</strong>:  Hier staan alle persoonlijke informatie over mij.<br>
+            Mijn CV is hier ook te vinden, en er is de mogelijkheid<br>
+            voor u om mijn CV te downloaden.<br><br>
+
+            <strong>Contactpagina</strong>:  via deze pagina kunt u contact met mij opnemen, <br>
+                 ik kan dan ue berichten kijken en beantwoorden.<br><br>
+
+            <strong>Projectenpagina</strong>:  Op deze pagina presenteer ik de projecten die ik eerder heb gemaakt.
+            Ik kan ook meer toekomstige projecten toevoegen als ik er meer heb.<br> Daarnaast is er een
+            sectie met informatie over alle projecten.
+            <br> <br> <br> <br> <br>  <br> <br> <br> <br> <br>
+        </p>
+
+
+
+
     </div>
+
 </div>
 
     <meta charset="UTF-8">
@@ -325,13 +352,16 @@ if (!isset($_SESSION['user_id'])) {
         @media screen and (max-width: 600px) {
             footer {
                 flex-direction: column;
-                text-align: center;
+                text-align: ;
                 padding: 1rem;
+                height: 9rem;
             }
 
             footer p {
                 margin: 0.5rem 0;
             }
+            h2{font-size: x-large;
+            margin-left: 0.8rem;}
         }
     </style>
 <div class="content">
@@ -339,6 +369,12 @@ if (!isset($_SESSION['user_id'])) {
 </div>
 
 <footer>
+    <div class="sociaal">
+        <a href="https://www.facebook.com/engrama.merea" target="_blank"><img class="face" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSskbpEX-jqvW2ZslvzHgvtEKykib-oCRvCPA&s" alt="Facebook"></a>
+        <a href="https://www.linkedin.com/legal/professional-community-policies?openinweb=true"><img class="linked" src="https://banner2.cleanpng.com/20180417/ifw/avfn2u8al.webp" alt="LinkedIn"></a>
+        <a href="#"><img class="insta" src="https://w7.pngwing.com/pngs/910/192/png-transparent-instagram-instagram-new-design-liner-round-social-media-instagram-new-icon.png" alt="Instagram"></a>
+        <a href="https://www.tiktok.com/@roro.mari22?_t=8q5sxdJ7iMd&_r=1" target="_blank"><img class="tik" src="https://w7.pngwing.com/pngs/483/249/png-transparent-tiktok-icon-thumbnail.png" alt="TikTok"></a>
+    </div>
     <p>Email: <a href="mailto:eng.rama.me@gmail.com">eng.rama.me@gmail.com</a></p>
     <p>Telefoonnummer: <a href="tel:06*******">06*********</a></p>
     <p>&copy; 2024 Rama Mari - Alle rechten voorbehouden</p>
