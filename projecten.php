@@ -140,7 +140,7 @@ $conn->close();
     </style>
 </head>
 <footer><a class="terug" href="index.php" target="_blank"> TERUG NAAR HOMEPAGINA</a></footer>
-<body>
+
 
 <script>
     function toggleTheme() {
@@ -157,24 +157,9 @@ $conn->close();
 
 </script>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mijn Portfolio</title>
-<link rel="icon" href="my.ico" type="image/x-icon">
-<style>
-    /* Body styling */
-    body {
-        background-image: url(bb.jpg);
-        background-repeat: repeat;
-        background-size: cover;
-        margin: 0;
-        font-family: Arial, sans-serif;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-    }
 
-    /* Main content container */
+<style>
+
     .content {
         flex: 1;
     }
