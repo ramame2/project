@@ -168,6 +168,9 @@ $conn->close();
             margin-top: 1.5rem;
             color: #007BFF;
         }
+        footer{
+
+        }
 
         /* Responsive Styles */
         @media screen and (max-width: 768px) {
@@ -210,7 +213,7 @@ $conn->close();
         <button type="submit">Verzenden</button>
     </form>
 </div>
-<footer>
+
     <div class="sociaal">
 
         <a href="https://www.facebook.com/engrama.merea" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSskbpEX-jqvW2ZslvzHgvtEKykib-oCRvCPA&s" alt="Facebook"></a>
@@ -222,8 +225,15 @@ $conn->close();
         <a href="instagram.com"><img src="https://w7.pngwing.com/pngs/910/192/png-transparent-instagram-instagram-new-design-liner-round-social-media-instagram-new-icon.png" alt="Instagram"></a>
         <a href="https://www.tiktok.com/@roro.mari22?_t=8q5sxdJ7iMd&_r=1" target="_blank"><img src="https://w7.pngwing.com/pngs/483/249/png-transparent-tiktok-icon-thumbnail.png" alt="TikTok"></a>
     </div>
+
+
+<footer>
     <a class="terug" href="index.php" target="_blank">TERUG NAAR HOMEPAGINA</a>
-   </footer>
+    <h2><br>
+    </h2>
+    <p>&copy; 2024 Rama Mari - Alle rechten voorbehouden</p>
+</footer>
+
 
 <script>
     function toggleTheme() {
@@ -241,5 +251,6 @@ $conn->close();
         themeToggle.textContent = body.classList.contains("dark-mode") ? "Light Mode" : "Dark Mode";
     }
 </script>
+
 </body>
 </html>
