@@ -1,3 +1,32 @@
+<?php
+$servername = "sql211.infinityfree.com";
+$username = "if0_37327165";
+$password = "edKK6Cnyx66e";
+$dbname = "if0_37327165_rama";
+
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT name, email, phone, experience, cv_file FROM cv";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        echo '<a href="data:application/pdf;base64,' . base64_encode($row['cv_file']) . '" download="CV">Download mijn CV</a>';
+    }
+} else {
+    echo "0 results";
+}
+$conn->close();
+?>
+
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -135,33 +164,6 @@
         }
     </style>
 
-    <?php
-    $servername = "sql211.infinityfree.com";
-    $username = "if0_37327165";
-    $password = "edKK6Cnyx66e";
-    $dbname = "if0_37327165_rama";
-
-
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    $sql = "SELECT name, email, phone, experience, cv_file FROM cv";
-    $result = $conn->query($sql);
-
-    if ($result->num_rows > 0) {
-        while($row = $result->fetch_assoc()) {
-         echo '<a href="data:application/pdf;base64,' . base64_encode($row['cv_file']) . '" download="CV">Download mijn CV</a>';
-        }
-    } else {
-        echo "0 results";
-    }
-    $conn->close();
-    ?>
 
 </head>
 <body class="light-mode">
@@ -221,17 +223,6 @@
 <title>Mijn Portfolio</title>
 <link rel="icon" href="my.ico" type="image/x-icon">
 <style>
-    /* Body styling */
-    body {
-        background-image: url(bb.jpg);
-        background-repeat: repeat;
-        background-size: cover;
-        margin: 0;
-        font-family: Arial, sans-serif;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-    }
 
     /* Main content container */
     .content {
