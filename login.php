@@ -200,5 +200,85 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </p>
     </div>
 </div>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mijn Portfolio</title>
+<link rel="icon" href="my.ico" type="image/x-icon">
+<style>
+    /* Body styling */
+    body {
+        background-image: url(bb.jpg);
+        background-repeat: repeat;
+        background-size: cover;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    /* Main content container */
+    .content {
+        flex: 1;
+    }
+
+    /* Footer styling */
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        color: #f0f0f0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        font-size: 0.9rem;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Footer content styling */
+    footer p {
+        margin: 0;
+        font-size: 1rem;
+        color: #d1d1d1;
+    }
+
+    footer a {
+        color: #00aced;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    footer a:hover {
+        text-decoration: underline;
+        color: #ffffff;
+    }
+
+    /* Media query for smaller screens */
+    @media screen and (max-width: 600px) {
+        footer {
+            flex-direction: column;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+    }
+</style>
+<div class="content">
+    <!-- Main content here -->
+</div>
+
+<footer>
+    <p>Email: <a href="mailto:eng.rama.me@gmail.com">eng.rama.me@gmail.com</a></p>
+    <p>Telefoonnummer: <a href="tel:06*******">06*********</a></p>
+    <p>&copy; 2024 Rama Mari - Alle rechten voorbehouden</p>
+</footer>
+
 </body>
 </html>
