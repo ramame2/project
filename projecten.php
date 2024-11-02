@@ -139,6 +139,12 @@ $conn->close();
         }
     </style>
 </head>
+
+<footer>
+    <p>Email: <a href="mailto:eng.rama.me@gmail.com">eng.rama.me@gmail.com</a></p>
+    <p>Telefoonnummer: <a href="tel:06*******">06*********</a></p>
+    <p>&copy; 2024 Rama Mari - Alle rechten voorbehouden</p>
+</footer>
 <footer><a class="terug" href="index.php" target="_blank"> TERUG NAAR HOMEPAGINA</a></footer>
 
 
@@ -215,11 +221,6 @@ $conn->close();
     <!-- Main content here -->
 </div>
 
-<footer>
-    <p>Email: <a href="mailto:eng.rama.me@gmail.com">eng.rama.me@gmail.com</a></p>
-    <p>Telefoonnummer: <a href="tel:06*******">06*********</a></p>
-    <p>&copy; 2024 Rama Mari - Alle rechten voorbehouden</p>
-</footer>
 
 </body>
 </html>
