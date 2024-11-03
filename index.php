@@ -396,7 +396,24 @@ if (!isset($_SESSION['user_id'])) {
             <br> <br> <br> <br> <br>  <br> <br> <br> <br> <br>
         </p>
 
+        <div id="text-container"></div>
 
+        <script>
+            const text = "Welcome to my website! This text will appear word by word.";
+            const words = text.split(" ");  // Split text into individual words
+            const textContainer = document.getElementById("text-container");
+            let index = 0;
+
+            function displayNextWord() {
+                if (index < words.length) {
+                    textContainer.innerHTML += words[index] + " ";
+                    index++;
+                    setTimeout(displayNextWord, 400); // Adjust speed (in milliseconds) if needed
+                }
+            }
+
+            displayNextWord();
+        </script>
 
 
     </div>
