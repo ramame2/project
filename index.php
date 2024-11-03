@@ -322,7 +322,7 @@ margin-left: 1rem;
         }
         h3{
             font-size: 3rem;
-            margin-left: 7rem;
+            margin-left: 5rem;
         }
 
     @media only screen and (max-device-width: 768px) {
@@ -342,7 +342,10 @@ margin-left: 1rem;
             margin-left: 0.8rem;
         }
 
-
+        h3{
+            font-size: 2rem;
+            margin-left: 1rem;
+        }
         .collapse-button {
             position: fixed;
             top: 0rem;
