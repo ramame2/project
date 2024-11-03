@@ -289,7 +289,7 @@ if (!isset($_SESSION['user_id'])) {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 1.5rem;
+            padding: 1rem 3rem;
             font-size: 0.9rem;
             box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
         }
