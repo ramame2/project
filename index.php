@@ -30,9 +30,15 @@
             textContainer.innerHTML += text[index];
             index++;
             setTimeout(displayNextLetter, 100); // Adjust speed (in milliseconds) if needed
+        } else {
+            // After finishing, reset index and clear text to repeat
+            setTimeout(() => {
+                textContainer.innerHTML = ""; // Clear the text container
+                index = 0; // Reset index
+                displayNextLetter(); // Start displaying again
+            }, 2000); // Wait for 2 seconds before restarting (adjust if needed)
         }
     }
-
     displayNextLetter();
 </script>
 
