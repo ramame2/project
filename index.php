@@ -8,10 +8,10 @@
         #text-container {
             width: 100%;
             height: 3rem;
-            font-size: 3rem;
+            font-size: 2rem;
             text-align: center;
-            color: #23717c;
-            font-family: Cambria, serif;
+            color: #076afd;
+            font-family: "Lucida Bright";
             margin-top: 2rem;
 
         }
@@ -29,14 +29,14 @@
         if (index < text.length) {
             textContainer.innerHTML += text[index];
             index++;
-            setTimeout(displayNextLetter, 100); // Adjust speed (in milliseconds) if needed
+            setTimeout(displayNextLetter, 100);
         } else {
-            // After finishing, reset index and clear text to repeat
+
             setTimeout(() => {
                 textContainer.innerHTML = ""; // Clear the text container
                 index = 0; // Reset index
                 displayNextLetter(); // Start displaying again
-            }, 2000); // Wait for 2 seconds before restarting (adjust if needed)
+            }, 2000); //2 seconds before restarting (adjust if needed)
         }
     }
     displayNextLetter();
@@ -78,7 +78,7 @@ if (!isset($_SESSION['user_id'])) {
 <style>
 
         body {
-            background-image: url(bb.jpg);
+            background-image: url("bb.jpg");
             background-repeat: repeat;
             background-size: cover;
             margin: 0;
@@ -86,14 +86,14 @@ if (!isset($_SESSION['user_id'])) {
         }
 
         h1 {
-            width: 12em;
+            width: 8.8em;
             height: 5rem;
-            font-size: 4rem;
+            font-size: 3.6rem;
             text-align: center;
-            color: #28383a;
+            color: #fff108;
             font-family: Cambria, serif;
-            margin-top: 3rem;
-            background-color: #86a3a8;
+            margin-top: 1rem;
+margin-left: 1rem;
             border-radius: 7rem;
         }
 
@@ -106,18 +106,8 @@ if (!isset($_SESSION['user_id'])) {
             margin-left: 4.8rem;
         }
 
-        p {
-            font-size: 1.1rem;
-            color: antiquewhite;
-            text-align: center;
-            padding: 0 1rem;
-            line-height: 1.5;
-            font-family: Cambria, serif;
-            margin-top: 5rem;
-        }
-
         .container1 {
-            width: 100%;
+            width: 50%%;
             display: flex;
             justify-content: center;
             gap: 4rem;
@@ -133,29 +123,45 @@ if (!isset($_SESSION['user_id'])) {
         }
 
         .container2 {
+            width: 80%;
+            justify-items: center;
             display: grid;
             grid-template-columns: auto auto;
-            justify-items: center;
             gap: 2rem;
             padding: 2rem 0;
+            margin:auto 0;
+
+
+
 
         }
 
         img {
-            width: 95%%;
-            max-width: 290px;
-            height: 97%;
-            border: #e2ce4a solid;
-            border-radius: 15rem;
-            margin-top: 0rem;
-            margin-left: -0.5rem;
+            justify-items: center;
+            width:63%;
+            height: 70%;
+            border: #4a7fe2 5px solid;
+            border-radius: 8rem;
+            margin-top: -3rem;
+            margin-left: auto;
         }
+
+       .text{
+           width:78%;
+           font-size: 1.4rem;
+           color: #dacfcf;
+           font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+
+
+       }
+
 
         .sociaal {
             display: flex;
             justify-content: center;
             gap: 0.7rem;
-            margin-top: 0rem;
+            margin-top: 1rem;
         }
 
         .sociaal img {
@@ -163,12 +169,8 @@ if (!isset($_SESSION['user_id'])) {
             height: 25px;
         }
 
-        .contact-info {
-            text-align: center;
-            color: #ffffff;
-            font-family: Cambria, serif;
-            padding: 1rem 0;
-        }
+
+
 
         .contact-info a {
             color: cadetblue;
@@ -199,29 +201,35 @@ if (!isset($_SESSION['user_id'])) {
         }
 
         h3 {
-            color: cadetblue;
-            font-size: 3.5rem;
+            color: #dbe817;
+            font-size: 4rem;
             margin-left: 4rem;
             font-family: "Arabic Typesetting";
+            font-weight: ;
         }
 
         .container3 {
 
-            margin-left: 0rem;
+            margin-left: 27rem;
+       margin: auto auto;
+        width: 80%;}
+
+        .p2{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 1.4rem;
+            color: white;
+
         }
 
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-        }
+
 
         .collapse-button {
             position: fixed;
-            top: 0rem;
+            top: 1rem;
             right: 7rem;
-            background-color: #d1cc5c;
-            color: white;
-            font-size: 11px;
+            background-color: #f1fa02;
+            color: #061ef6;
+            font-size: 18px;
             padding: 10px 12px;
             border: cadetblue solid;
             cursor: pointer;
@@ -238,13 +246,14 @@ if (!isset($_SESSION['user_id'])) {
 
         .items {
             display: none;
-            background-color: #fff;
+            background-color: #f4e9e9;
             position: fixed;
-            top: 60px;
+            top: 85px;
             right: 62px;
             border: 1px solid #ddd;
             border-radius: 8px;
-            width: 200px;
+            width: 190px;
+            height: 210px;
             box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
             z-index: 999;
             overflow: hidden;
@@ -253,7 +262,7 @@ if (!isset($_SESSION['user_id'])) {
         .items a {
             display: block;
             padding: 16px 20px;
-            font-size: 18px; /* Make text larger */
+            font-size: 18px;
             text-decoration: none;
             color: #333;
             transition: background-color 0.3s ease, color 0.3s ease;
@@ -262,13 +271,13 @@ if (!isset($_SESSION['user_id'])) {
 
 
         .items a:hover {
-            background-color: #f1f1f1;
-            color: #007BFF; /* Professional blue hover color */
+            background-color: #5c5252;
+            color: #007BFF;
         }
 
 
         body {
-            background-image: url(bb.jpg);
+            background-image: url(jj.jpg);
             background-repeat: repeat;
             background-size: cover;
             margin: 0;
@@ -311,6 +320,10 @@ if (!isset($_SESSION['user_id'])) {
             text-decoration: underline;
             color: #ffffff;
         }
+        h3{
+            font-size: 3rem;
+            margin-left: 7rem;
+        }
 
     @media only screen and (max-device-width: 768px) {
         footer {
@@ -325,23 +338,17 @@ if (!isset($_SESSION['user_id'])) {
         }
 
         h2 {
-            font-size: x-large;
+            font-size: large;
             margin-left: 0.8rem;
         }
 
 
-        img {
-            width: 23rem;
-            height: 20rem;
-
-        }
-
         .collapse-button {
             position: fixed;
             top: 0rem;
-            right: 2rem;
-            background-color: #3c6730;
-            color: white;
+            right: 1.5rem;
+            background-color: #defd10;
+            color: #0f3efb;
             font-size: 15px;
             padding: 10px 12px;
             border: cadetblue solid;
@@ -349,6 +356,7 @@ if (!isset($_SESSION['user_id'])) {
             z-index: 1000;
             border-radius: 29px;
             transition: background-color 0.3s ease;;
+            width: 5rem;
         }
 
         .items {
@@ -366,23 +374,44 @@ if (!isset($_SESSION['user_id'])) {
         }
 
         .container2 {
+          margin: auto;
 
-            justify-items: center;
-            gap: 1rem;
-            padding: 1rem 0;
-            max-width: 110%;
-            margin: auto;
+
         }
+        img {
+            width: 11rem;
+            height: 11rem;
+
+        }
+
+        p {
+            text-align: center;
+            margin: 0rem;
+            font-size: 0.9rem ;
+        }
+
+        #text-container{
+            font-size: 1.3rem;
+            margin-bottom: 0.1rem;
+
+        }
+        h1{
+            justify-items: center;
+            margin-top: 0.5rem;
+            font-size: x-large;
+            height: 2.5rem;
+            width: 10.5rem;
+
+        }
+
+
     }
 </style>
 
 <div class="container1">
     <h1>Rama Mari</h1>
 </div>
-<div>
 
-
-</div>
 
 
 </head>
@@ -393,19 +422,19 @@ if (!isset($_SESSION['user_id'])) {
 
 <!-- Collapsible menu items -->
 <div class="items" id="menuItems">
-    <a class="Contact" href="me2.php" target="_blank">Contact</a>
-    <a class="over" href="over.php" target="_blank">Over</a>
-    <a class="projecten" href="projecten.php" target="_blank">Projecten</a>
+    <a class="Contact" href="me2.php" target="_self">Contact</a>
+    <a class="over" href="over.php" target="_self">Over</a>
+    <a class="projecten" href="projecten.php" target="_self">Projecten</a>
 </div>
 
-<!-- JavaScript to toggle menu -->
+<!--toggle menu -->
 <script>
     function toggleMenu() {
         const menuItems = document.getElementById("menuItems");
         menuItems.style.display = (menuItems.style.display === "block") ? "none" : "block";
     }
 
-    // Close the menu if clicked outside
+    // Close if clicked outside
     window.onclick = function(event) {
         const menuItems = document.getElementById("menuItems");
         if (!event.target.matches('.collapse-button')) {
@@ -422,30 +451,39 @@ if (!isset($_SESSION['user_id'])) {
 
 <div class="container2">
     <img src="rm.jpg" alt="Rama Mari">
+
     <div class="text">
-        <h2>Hello,<br> welcome to my portfolio</h2>
-        <p>Ik ben Rama Mari, en dit is mijn portfolio.<br>Ik hou van leven, ben ambitieus, serieus in mijn taken en werk, ik hou ervan om al mijn taken op tijd af te ronden.<br>
+
+        <p>Ik ben Rama Mari, en dit is mijn portfolio.<br>
+            Ik ben ambitieus, serieus in mijn taken en werk.<br>
+            Ik hou ervan om al mijn taken op tijd af te ronden.<br>
             Productiviteit verhoogt altijd mijn geluksgevoel en positieve energie.</p>
     </div>
+</div>
+
+
+
+
     <div class="container3">
         <h3> Welke secties bevat mijn portfoilio?</h3>
         <p class="p2">
             <strong>Over-pagina</strong>:  Hier staan alle persoonlijke informatie over mij.<br>
             Mijn CV is hier ook te vinden, en er is de mogelijkheid<br>
-            voor u om mijn CV te downloaden.<br><br>
+            voor u om mijn CV te downloaden.<br>
 
             <strong>Contactpagina</strong>:  via deze pagina kunt u contact met mij opnemen, <br>
-            ik kan dan ue berichten kijken en beantwoorden.<br><br>
+            ik kan dan ue berichten kijken en beantwoorden.<br>
 
             <strong>Projectenpagina</strong>:  Op deze pagina presenteer ik de projecten die ik eerder heb gemaakt.
-            Ik kan ook meer toekomstige projecten toevoegen als ik er meer heb.<br> Daarnaast is er een
+            Ik kan ook meer toekomstige projecten toevoegen als ik er meer heb. Daarnaast is er een
             sectie met informatie over alle projecten.
-            <br> <br> <br> <br> <br>  <br> <br> <br> <br> <br>
+            <br> <br> <br>
         </p>
 
 
     </div>
 
+</div>
 </div>
 
 <footer>

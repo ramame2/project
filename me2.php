@@ -168,8 +168,38 @@ $conn->close();
             margin-top: 1.5rem;
             color: #007BFF;
         }
-        footer{
 
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            font-size: 0.9rem;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer content styling */
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+            color: #d1d1d1;
+        }
+
+        footer a {
+            color: #00aced;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+            color: #ffffff;
         }
 
         /* Responsive Styles */
@@ -223,12 +253,14 @@ $conn->close();
                 frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
         <a href="instagram.com"><img src="https://w7.pngwing.com/pngs/910/192/png-transparent-instagram-instagram-new-design-liner-round-social-media-instagram-new-icon.png" alt="Instagram"></a>
-        <a href="https://www.tiktok.com/@roro.mari22?_t=8q5sxdJ7iMd&_r=1" target="_blank"><img src="https://w7.pngwing.com/pngs/483/249/png-transparent-tiktok-icon-thumbnail.png" alt="TikTok"></a>
-    </div>
+        <a href="https://www.tiktok.com/@roro.mari22?_t=8q5sxdJ7iMd&_r=1" target="_self"><img src="https://w7.pngwing.com/pngs/483/249/png-transparent-tiktok-icon-thumbnail.png" alt="TikTok"></a>
 
+<br><br><br>
+    </div>
+<br><br><br><br><br><br><br><br><br>
 
 <footer>
-    <a class="terug" href="index.php" target="_blank">TERUG NAAR HOMEPAGINA</a>
+    <a class="terug" href="index.php" target="_self">TERUG NAAR HOMEPAGINA</a>
     <h2><br>
     </h2>
     <p>&copy; 2024 Rama Mari - Alle rechten voorbehouden</p>

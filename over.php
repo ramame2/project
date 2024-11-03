@@ -199,7 +199,6 @@ $conn->close();
 <div class="d">
 
 </div>
-<footer><a class="terug" href="index.php" target="_blank"> TERUG NAAR HOMEPAGINA</a></footer>
 <script>
     function toggleTheme() {
         const body = document.body;
@@ -229,7 +228,7 @@ $conn->close();
         flex: 1;
     }
 
-    /* Footer styling */
+
     footer {
         position: fixed;
         bottom: 0;
@@ -281,8 +280,7 @@ $conn->close();
 </div>
 
 <footer>
-    <p>Email: <a href="mailto:eng.rama.me@gmail.com">eng.rama.me@gmail.com</a></p>
-    <p>Telefoonnummer: <a href="tel:06*******">06*********</a></p>
+    <a class="terug" href="index.php" target="_self"> TERUG NAAR HOMEPAGINA</a>
     <p>&copy; 2024 Rama Mari - Alle rechten voorbehouden</p>
 </footer>
 

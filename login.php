@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             color: white;
             margin: 0;
             background-color: #1a1a1a;
-            background-image: url("bb.jpg");
+            background-image: url("jj.jpg");
             background-size: cover;
             display: flex;
             flex-direction: column;
@@ -63,17 +63,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         h1 {
             font-size: 4rem;
-            color: #2e717c;
+            color: #e8dd0b;
             margin: 0;
         }
 
         img {
             width: 100%;
-            max-width: 290px;
+            max-width: 299px;
             height: auto;
             border-radius: 80%;
             margin: 1rem;
-            border: solid #aeae42;
+            border: solid 0.2rem #0726f4;
         }
 
         .login-container {
@@ -98,7 +98,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         .login-container button {
             width: 10rem;
-            background-color: cadetblue;
+            background-color: #0740fb;
             color: #ffffff;
             cursor: pointer;
             font-weight: bold;
@@ -106,11 +106,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         .login-container button:hover {
-            background-color: #5f9ea0;
+            background-color: #13d7dd;
         }
 
         .login-container a {
-            color: cadetblue;
+            color: #091bed;
             text-decoration: none;
         }
 
@@ -120,7 +120,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         .text {
             color: #fbf9f9;
-            font-size: 1.14rem;
+            font-size: 1.3rem;
             text-align: left;
             margin: 1rem;
         }
@@ -136,7 +136,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         h2 {
-            color: #bdbd4c;
+            color: #efef16;
         }
 
         @media screen and (max-width: 768px) {
