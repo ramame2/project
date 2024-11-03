@@ -396,6 +396,23 @@ if (!isset($_SESSION['user_id'])) {
             <br> <br> <br> <br> <br>  <br> <br> <br> <br> <br>
         </p>
 
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Word by Word Text Animation</title>
+            <style>
+                #text-container {
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: #333;
+                    /* Adjust the font size, color, and style as you like */
+                }
+            </style>
+        </head>
+        <body>
+
         <div id="text-container"></div>
 
         <script>
@@ -414,6 +431,10 @@ if (!isset($_SESSION['user_id'])) {
 
             displayNextWord();
         </script>
+
+        </body>
+        </html>
+
 
 
     </div>
