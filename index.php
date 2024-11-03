@@ -1,3 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word by Word Text Animation</title>
+    <style>
+        #text-container {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            /* Adjust the font size, color, and style as you like */
+        }
+    </style>
+</head>
+<body>
+
+<div id="text-container"></div>
+
+<script>
+    const text = "Welcome to my website! This text will appear word by word.";
+    const words = text.split(" ");  // Split text into individual words
+    const textContainer = document.getElementById("text-container");
+    let index = 0;
+
+    function displayNextWord() {
+        if (index < words.length) {
+            textContainer.innerHTML += words[index] + " ";
+            index++;
+            setTimeout(displayNextWord, 400); // Adjust speed (in milliseconds) if needed
+        }
+    }
+
+    displayNextWord();
+</script>
+
+</body>
+</html>
+
 <?php
 session_start();
 if (!isset($_SESSION['user_id'])) {
@@ -395,46 +434,6 @@ if (!isset($_SESSION['user_id'])) {
             sectie met informatie over alle projecten.
             <br> <br> <br> <br> <br>  <br> <br> <br> <br> <br>
         </p>
-
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Word by Word Text Animation</title>
-            <style>
-                #text-container {
-                    font-size: 24px;
-                    font-weight: bold;
-                    color: #333;
-                    /* Adjust the font size, color, and style as you like */
-                }
-            </style>
-        </head>
-        <body>
-
-        <div id="text-container"></div>
-
-        <script>
-            const text = "Welcome to my website! This text will appear word by word.";
-            const words = text.split(" ");  // Split text into individual words
-            const textContainer = document.getElementById("text-container");
-            let index = 0;
-
-            function displayNextWord() {
-                if (index < words.length) {
-                    textContainer.innerHTML += words[index] + " ";
-                    index++;
-                    setTimeout(displayNextWord, 400); // Adjust speed (in milliseconds) if needed
-                }
-            }
-
-            displayNextWord();
-        </script>
-
-        </body>
-        </html>
-
 
 
     </div>
