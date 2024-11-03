@@ -1,14 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
 
     <style>
-        body {
-
-            justify-content: center; /* Center horizontally */
-
-            
-        }
 
         #text-container {
             font-size: 24px;
@@ -18,7 +12,6 @@
             margin-top: 20px; /* Add some space from the top */
         }
     </style>
-</head>
 <body>
 
 <div id="text-container"></div>
