@@ -3,18 +3,18 @@
 
 
     <style>
-        body {
 
-            justify-content: center; /* Center horizontally */
-
-        }
 
         #text-container {
-            font-size: 29px;
-            font-weight: bold;
-            color: #fbf9f9;
-            /* Adjust font size, color, and style as you like */
-            margin-top: 20px; /* Add some space from the top */
+            width: 12em;
+            height: 5rem;
+            font-size: 4rem;
+            text-align: center;
+            color: #28383a;
+            font-family: Cambria, serif;
+            margin-top: 3rem;
+            background-color: #86a3a8;
+            border-radius: 7rem;
         }
     </style>
 <body>
