@@ -7,7 +7,7 @@
 
         #text-container {
             width: 100%;
-            height: 4rem;
+            height: 3rem;
             font-size: 3rem;
             text-align: center;
             color: #23717c;
