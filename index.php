@@ -3,13 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Word by Word Text Animation</title>
+    <title>Letter by Letter Text Animation</title>
     <style>
+        body {
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: flex-start; /* Align to the top */
+            height: 100vh; /* Full height of the viewport */
+            margin: 0; /* Remove default margin */
+        }
+
         #text-container {
             font-size: 24px;
             font-weight: bold;
-            color: #333;
-            /* Adjust the font size, color, and style as you like */
+            color: #fbf9f9;
+            /* Adjust font size, color, and style as you like */
+            margin-top: 20px; /* Add some space from the top */
         }
     </style>
 </head>
@@ -18,20 +27,19 @@
 <div id="text-container"></div>
 
 <script>
-    const text = "Welcome to my website! This text will appear word by word.";
-    const words = text.split(" ");  // Split text into individual words
+    const text = "Hello!! welcome to my portfolio";
     const textContainer = document.getElementById("text-container");
     let index = 0;
 
-    function displayNextWord() {
-        if (index < words.length) {
-            textContainer.innerHTML += words[index] + " ";
+    function displayNextLetter() {
+        if (index < text.length) {
+            textContainer.innerHTML += text[index];
             index++;
-            setTimeout(displayNextWord, 400); // Adjust speed (in milliseconds) if needed
+            setTimeout(displayNextLetter, 100); // Adjust speed (in milliseconds) if needed
         }
     }
 
-    displayNextWord();
+    displayNextLetter();
 </script>
 
 </body>
