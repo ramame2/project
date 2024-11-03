@@ -376,9 +376,27 @@ if (!isset($_SESSION['user_id'])) {
 <div class="container2">
     <img src="rm.jpg" alt="Rama Mari">
     <div class="text">
-        <h2>Hello,<br> welcome to my portfolio</h2>
-        <p>Ik ben Rama Mari, en dit is mijn portfolio.<br>Ik hou van leven, ben ambitieus, serieus in mijn taken en werk, ik hou ervan om al mijn taken op tijd af te ronden.<br>
-            Productiviteit verhoogt altijd mijn geluksgevoel en positieve energie.</p>
+
+    <script>
+        const text = "
+            <h2>Hello,<br> welcome to my portfolio</h2>
+        Ik ben Rama Mari, en dit is mijn portfolio. Ik hou van leven, ben ambitieus, serieus in mijn taken en werk, ik hou ervan om al mijn taken op tijd af te ronden.<br>
+            Productiviteit verhoogt altijd mijn geluksgevoel en positieve energie.</p> ";
+        const words = text.split(" ");  // Split text into individual words
+        const textContainer = document.getElementById("text");
+        let index = 0;
+
+        function displayNextWord() {
+            if (index < words.length) {
+                textContainer.innerHTML += words[index] + " ";
+                index++;
+                setTimeout(displayNextWord, 400); // Adjust speed (in milliseconds) if needed
+            }
+        }
+
+        displayNextWord();
+    </script>
+
     </div>
     <div class="container3">
         <h3> Welke secties bevat mijn portfoilio?</h3>
