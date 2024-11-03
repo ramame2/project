@@ -7,12 +7,12 @@
 
         #text-container {
             width: 100%;
-            height: 5rem;
-            font-size: 4rem;
+            height: 4rem;
+            font-size: 3rem;
             text-align: center;
-            color: #28383a;
+            color: #23717c;
             font-family: Cambria, serif;
-            margin-top: 3rem;
+            margin-top: 2rem;
 
         }
     </style>
