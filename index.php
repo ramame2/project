@@ -4,11 +4,10 @@
 
     <style>
         body {
-            display: flex;
+
             justify-content: center; /* Center horizontally */
-            align-items: flex-start; /* Align to the top */
-            height: 100vh; /* Full height of the viewport */
-            margin: 0; /* Remove default margin */
+
+            
         }
 
         #text-container {
