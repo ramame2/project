@@ -378,10 +378,7 @@ if (!isset($_SESSION['user_id'])) {
     <div class="text">
 
     <script>
-        const text = "
-            <h2>Hello,<br> welcome to my portfolio</h2>
-        Ik ben Rama Mari, en dit is mijn portfolio. Ik hou van leven, ben ambitieus, serieus in mijn taken en werk, ik hou ervan om al mijn taken op tijd af te ronden.<br>
-            Productiviteit verhoogt altijd mijn geluksgevoel en positieve energie.</p> ";
+        const text = " Hello, welcome to my portfolio Ik ben Rama Mari, en dit is mijn portfolio. Ik hou van leven, ben ambitieus, serieus in mijn taken en werk, ik hou ervan om al mijn taken op tijd af te ronden. Productiviteit verhoogt altijd mijn geluksgevoel en positieve energie. ";
         const words = text.split(" ");  // Split text into individual words
         const textContainer = document.getElementById("text");
         let index = 0;
