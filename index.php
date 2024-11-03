@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
 
     <style>
         body {
-            display: flex;
+
             justify-content: center; /* Center horizontally */
-            align-items: flex-start; /* Align to the top */
-            height: 100vh; /* Full height of the viewport */
-            margin: 0; /* Remove default margin */
+
         }
 
         #text-container {
@@ -19,13 +17,12 @@
             margin-top: 20px; /* Add some space from the top */
         }
     </style>
-</head>
 <body>
 
 <div id="text-container"></div>
 
 <script>
-    const text = "Hello!! welcome to my portfolio";
+    const text = "Hello!! welcome to my portfolio!";
     const textContainer = document.getElementById("text-container");
     let index = 0;
 
