@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
 
     <style>
+        body {
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: flex-start; /* Align to the top */
+            height: 100vh; /* Full height of the viewport */
+            margin: 0; /* Remove default margin */
+        }
 
         #text-container {
-            font-size: 24px;
+            font-size: 29px;
             font-weight: bold;
             color: #fbf9f9;
             /* Adjust font size, color, and style as you like */
             margin-top: 20px; /* Add some space from the top */
         }
     </style>
+</head>
 <body>
 
 <div id="text-container"></div>
