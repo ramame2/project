@@ -74,7 +74,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             gap: 1.7rem;
             margin-top: 1rem;
             border-radius: 8rem;
-            margin-top: 0rem;
             margin-left: 1rem;
 
         }
@@ -84,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             height: 70%;
             border: #4a7fe2 2px solid;
             border-radius: 8rem;
-            margin-top: 0rem;
+            margin-top: 0;
         }
 
         .sociaal img {
@@ -117,8 +116,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             color: #dbe817;
             font-size: 4rem;
             margin-left: 4rem;
-            font-family: "Arabic Typesetting";
-            font-weight: ;
+            font-family: "Arabic Typesetting", serif;
+
         }
 
         .mypic {
@@ -199,7 +198,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             font-size: 2rem;
             text-align: center;
             color: #076afd;
-            font-family: "Lucida Bright";
+            font-family: "Lucida Bright", serif;
             margin-top: 2rem;
         }
 
@@ -266,7 +265,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
             footer p {
-                margin: 0rem;
+                margin: 0;
                 font-size: 1rem;
                 color: #d1d1d1;
             }
