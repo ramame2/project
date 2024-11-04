@@ -1,50 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-
-    <style>
-
-
-        #text-container {
-            width: 100%;
-            height: 3rem;
-            font-size: 2rem;
-            text-align: center;
-            color: #076afd;
-            font-family: "Lucida Bright";
-            margin-top: 2rem;
-
-        }
-    </style>
-<body>
-
-<div id="text-container"></div>
-
-<script>
-    const text = "Hello!! welcome to my portfolio!";
-    const textContainer = document.getElementById("text-container");
-    let index = 0;
-
-    function displayNextLetter() {
-        if (index < text.length) {
-            textContainer.innerHTML += text[index];
-            index++;
-            setTimeout(displayNextLetter, 100);
-        } else {
-
-            setTimeout(() => {
-                textContainer.innerHTML = ""; // Clear the text container
-                index = 0; // Reset index
-                displayNextLetter(); // Start displaying again
-            }, 2000); //2 seconds before restarting (adjust if needed)
-        }
-    }
-    displayNextLetter();
-</script>
-
-</body>
-</html>
-
 <?php
 session_start();
 if (!isset($_SESSION['user_id'])) {
@@ -73,17 +26,11 @@ if (!isset($_SESSION['user_id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mijn Portfolio</title>
+    <link rel="stylesheet" href="index.css">
     <link rel="icon" href="my.ico" type="image/x-icon">
+
 </head>
 <style>
-
-        body {
-            background-image: url("bb.jpg");
-            background-repeat: repeat;
-            background-size: cover;
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
 
         h1 {
             width: 8.8em;
@@ -93,17 +40,8 @@ if (!isset($_SESSION['user_id'])) {
             color: #fff108;
             font-family: Cambria, serif;
             margin-top: 1rem;
-margin-left: 1rem;
+            margin-left: 1rem;
             border-radius: 7rem;
-        }
-
-        h2 {
-            color: cadetblue;
-            font-family: Cambria, serif;
-            font-size: 2.2rem;
-            text-align: left;
-            margin-top: 1rem;
-            margin-left: 4.8rem;
         }
 
         .container1 {
@@ -131,16 +69,13 @@ margin-left: 1rem;
             padding: 2rem 0;
             margin:auto 0;
 
-
-
-
         }
 
-        img {
+        .mypic {
             justify-items: center;
             width:63%;
             height: 70%;
-            border: #4a7fe2 5px solid;
+            border: #4a7fe2 2px solid;
             border-radius: 8rem;
             margin-top: -3rem;
             margin-left: auto;
@@ -152,263 +87,282 @@ margin-left: 1rem;
            color: #dacfcf;
            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
-
-
        }
 
 
         .sociaal {
             display: flex;
             justify-content: center;
-            gap: 0.7rem;
+            gap: 1.7rem;
             margin-top: 1rem;
-        }
-
-        .sociaal img {
-            width: 25px;
-            height: 25px;
-        }
-
-
-
-
-        .contact-info a {
-            color: cadetblue;
-            text-decoration: none;
-        }
-
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-
-        button {
-            width: 100px;
-            margin: 1rem auto;
-            display: block;
-            border-radius: 2rem;
-            padding: 0.5rem;
-            font-size: 1rem;
-            background-color: #ffffff;
-            border: solid 1px cadetblue;
-            color: #30737e;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        button:hover {
-            background-color: #30737e;
-            color: #ffffff;
-        }
-
-        h3 {
-            color: #dbe817;
-            font-size: 4rem;
-            margin-left: 4rem;
-            font-family: "Arabic Typesetting";
-            font-weight: ;
-        }
-
-        .container3 {
-
-            margin-left: 27rem;
-       margin: auto auto;
-        width: 80%;}
-
-        .p2{
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            font-size: 1.4rem;
-            color: white;
-
-        }
-
-
-
-        .collapse-button {
-            position: fixed;
-            top: 1rem;
-            right: 7rem;
-            background-color: #f1fa02;
-            color: #061ef6;
-            font-size: 18px;
-            padding: 10px 12px;
-            border: cadetblue solid;
-            cursor: pointer;
-            z-index: 1000;
-            border-radius: 28px;
-            transition: background-color 0.3s ease;;
-        }
-
-
-        .collapse-button:hover {
-            background-color: #555;
-        }
-
-
-        .items {
-            display: none;
-            background-color: #f4e9e9;
-            position: fixed;
-            top: 85px;
-            right: 62px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            width: 190px;
-            height: 210px;
-            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-            z-index: 999;
-            overflow: hidden;
-        }
-
-        .items a {
-            display: block;
-            padding: 16px 20px;
-            font-size: 18px;
-            text-decoration: none;
-            color: #333;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            font-weight: 500;
-        }
-
-
-        .items a:hover {
-            background-color: #5c5252;
-            color: #007BFF;
-        }
-
-
-        body {
-            background-image: url(jj.jpg);
-            background-repeat: repeat;
-            background-size: cover;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-
-        footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: #333;
-            color: #f0f0f0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 3rem;
-            font-size: 0.9rem;
-            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
-        }
-
-
-        footer p {
-            margin: 0;
-            font-size: 1rem;
-            color: #d1d1d1;
-        }
-
-        footer a {
-            color: #00aced;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-            color: #ffffff;
-        }
-        h3{
-            font-size: 3rem;
-            margin-left: 5rem;
-        }
-
-    @media only screen and (max-device-width: 768px) {
-        footer {
-            flex-direction: grid;
-            text-align: left;
-            padding: 1rem;
-            height: 4rem;
-        }
-
-        footer p {
-            margin: 0.5rem 0;
-        }
-
-        h2 {
-            font-size: large;
-            margin-left: 0.8rem;
-        }
-
-        h3{
-            font-size: 2rem;
+            border-radius: 8rem;
+            margin-top: 0rem;
             margin-left: 1rem;
-        }
-        .collapse-button {
-            position: fixed;
-            top: 0rem;
-            right: 1.5rem;
-            background-color: #defd10;
-            color: #0f3efb;
-            font-size: 15px;
-            padding: 10px 12px;
-            border: cadetblue solid;
-            cursor: pointer;
-            z-index: 1000;
-            border-radius: 29px;
-            transition: background-color 0.3s ease;;
-            width: 5rem;
-        }
-
-        .items {
-            display: none;
-            background-color: #fff;
-            position: fixed;
-            top: 60px;
-            right: 12px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            width: 200px;
-            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-            z-index: 999;
-            overflow: hidden;
-        }
-
-        .container2 {
-          margin: auto;
-
 
         }
         img {
-            width: 11rem;
-            height: 11rem;
-
-        }
-
-        p {
-            text-align: center;
-            margin: 0rem;
-            font-size: 0.9rem ;
-        }
-
-        #text-container{
-            font-size: 1.3rem;
-            margin-bottom: 0.1rem;
-
-        }
-        h1{
             justify-items: center;
-            margin-top: 0.5rem;
-            font-size: x-large;
-            height: 2.5rem;
-            width: 10.5rem;
-
+            width: 63%;
+            height: 70%;
+            border: #4a7fe2 2px solid;
+            border-radius: 8rem;
+            margin-top: 0rem;
         }
 
+            .sociaal img {
+                width: 25px;
+                height: 25px;
+            }
 
-    }
+
+
+            button {
+                width: 100px;
+                margin: 1rem auto;
+                display: block;
+                border-radius: 2rem;
+                padding: 0.5rem;
+                font-size: 1rem;
+                background-color: #ffffff;
+                border: solid 1px cadetblue;
+                color: #30737e;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+
+            button:hover {
+                background-color: #30737e;
+                color: #ffffff;
+            }
+
+            h3 {
+                color: #dbe817;
+                font-size: 4rem;
+                margin-left: 4rem;
+                font-family: "Arabic Typesetting";
+                font-weight: ;
+            }
+
+            .container3 {
+
+                margin-left: 27rem;
+                margin: auto auto;
+                width: 80%;}
+
+            .p2{
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 1.4rem;
+                color: white;
+
+            }
+
+
+
+            .collapse-button {
+                position: fixed;
+                top: 1rem;
+                right: 7rem;
+                background-color: rgba(241, 250, 2, 0.69);
+                color: #061ef6;
+                font-size: 18px;
+                padding: 10px 12px;
+                border: cadetblue solid;
+                cursor: pointer;
+                z-index: 1000;
+                border-radius: 28px;
+                transition: background-color 0.3s ease;;
+            }
+
+
+            .collapse-button:hover {
+                background-color: #3f72a5;
+            }
+
+
+            .items {
+                display: none;
+                background-color: rgba(244, 233, 233, 0.58);
+                position: fixed;
+                top: 85px;
+                right: 62px;
+                border: 1px solid rgba(221, 221, 221, 0.27);
+                border-radius: 8px;
+                width: 165px;
+                height: 165px;
+                box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+                z-index: 999;
+                overflow: hidden;
+            }
+
+            .items a {
+                display: block;
+                padding: 16px 20px;
+                font-size: 18px;
+                text-decoration: none;
+                color: rgb(251, 249, 249);
+                transition: background-color 0.3s ease, color 0.3s ease;
+                font-weight: 500;
+            }
+
+
+            .items a:hover {
+                background-color: rgba(92, 116, 205, 0.75);
+                color: #fff200;
+            }
+
+
+            body {
+                background-image: url(bk.jpg);
+                background-repeat: repeat;
+                background-size: cover;
+                margin: 0;
+                font-family: Arial, sans-serif;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+            }
+
+            footer {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 98%;
+                background-color: rgba(51, 51, 51, 0.53);
+                color: #f0f0f0;
+                display: flex;
+                justify-content: space-between;
+                padding: 1rem 1rem;
+                font-size: 0.9rem;
+                box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+            }
+
+
+            footer p {
+                margin: 0.3rem;
+                font-size: 1rem;
+                color: #d1d1d1;
+            }
+
+
+            h3{
+                font-size: 3rem;
+                margin-left: 5rem;
+            }
+
+            @media only screen and (max-device-width: 500px) {
+                footer {
+                    position: fixed;
+                    background-color: rgba(51, 51, 51, 0.56);
+                    color: #f0f0f0;
+                    padding: 0.5rem 0rem;
+                    font-size: 0.5rem;
+
+                }
+
+                .sociaal {
+                    display: flex;
+                    gap: 1rem;
+                    margin-top: 0rem;
+                }
+
+
+                img {
+
+                    border: #ddf405 1px solid;
+                    border-radius: 8rem;
+
+                }
+
+
+                h3 {
+                    color: #dbe817;
+                    font-size: 2rem;
+                    margin-left: 1rem;
+                    font-family: "Arabic Typesetting";
+                    font-weight: ;
+                }
+
+
+                .p2{
+                    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                    font-size: 1.4rem;
+                    color: white;
+                    margin-top: -0.5rem;
+                    margin-left: 1rem;
+
+                }
+
+
+                .collapse-button {
+                    position: fixed;
+                    top: 0rem;
+                    right: 1.5rem;
+                    background-color: #defd10;
+                    color: #0f3efb;
+                    font-size: 15px;
+                    padding: 10px 12px;
+                    border: cadetblue solid;
+                    cursor: pointer;
+                    z-index: 1000;
+                    border-radius: 29px;
+                    transition: background-color 0.3s ease;;
+                    width: 5rem;
+                }
+
+                .items {
+                    display: none;
+                    background-color: rgba(48, 42, 42, 0.75);
+                    position: fixed;
+                    top: 60px;
+                    right: 12px;
+                    border: 1px solid rgba(221, 221, 221, 0.6);
+                    border-radius: 8px;
+                    width: 200px;
+                    box-shadow: 0px 8px 16px rgba(152, 144, 43, 0.27);
+                    z-index: 999;
+                    overflow: hidden;
+                }
+
+                .container2 {
+                    margin-left: 0rem;
+                    width: 100%;
+                    height: 28rem;
+                }
+
+                .mypic {
+
+                    border: #4a7fe2 1px solid;
+                    margin-top: -3rem;
+                    margin-left: 8rem;
+                    width: 14rem;
+                    height: 14rem;
+                }
+
+                p {
+                    text-align: left;
+                    font-size: 1.3rem ;
+                    margin-top: 12.5rem;
+                    margin-left: -21rem;
+                    width: %;
+                }
+
+                #text-container{
+                    font-size: 1.5rem;
+                    margin-bottom: 1.5rem;
+
+                }
+                h1{
+                    justify-items: center;
+                    margin-top: 0.5rem;
+                    font-size: x-large;
+                    height: 2.5rem;
+                    width: 10.5rem;
+
+                }
+
+
+            }
+        }
 </style>
 
 <div class="container1">
@@ -418,16 +372,42 @@ margin-left: 1rem;
 
 
 </head>
+
 <body>
+
+
+<div id="text-container"></div>
+
+<script>
+    const text = "Hello!! Welcome to my portfolio!";
+    const textContainer = document.getElementById("text-container");
+    let index = 0;
+
+    function displayNextLetter() {
+        if (index < text.length) {
+            textContainer.innerHTML += text[index];
+            index++;
+            setTimeout(displayNextLetter, 100);
+        } else {
+
+            setTimeout(() => {
+                textContainer.innerHTML = "";
+                index = 0; //
+                displayNextLetter();
+            }, 2000);
+        }
+    }
+    displayNextLetter();
+</script>
 
 
 <button class="collapse-button" onclick="toggleMenu()">☰</button>
 
-<!-- Collapsible menu items -->
+
 <div class="items" id="menuItems">
-    <a class="Contact" href="me2.php" target="_self">Contact</a>
-    <a class="over" href="over.php" target="_self">Over</a>
-    <a class="projecten" href="projecten.php" target="_self">Projecten</a>
+    <a class="Contact" href="me2.php" target="_self">📨 Contact </a>
+    <a class="over" href="over.php" target="_self">️📑 Over mij</a>
+    <a class="projecten" href="projecten.php" target="_self">📚 Projecten </a>
 </div>
 
 <!--toggle menu -->
@@ -437,7 +417,7 @@ margin-left: 1rem;
         menuItems.style.display = (menuItems.style.display === "block") ? "none" : "block";
     }
 
-    // Close if clicked outside
+
     window.onclick = function(event) {
         const menuItems = document.getElementById("menuItems");
         if (!event.target.matches('.collapse-button')) {
@@ -448,12 +428,11 @@ margin-left: 1rem;
     }
 </script>
 
-</html>
 
 
 
 <div class="container2">
-    <img src="rm.jpg" alt="Rama Mari">
+    <img class="mypic" src="rm.jpg" alt="Rama Mari">
 
     <div class="text">
 
@@ -472,10 +451,10 @@ margin-left: 1rem;
         <p class="p2">
             <strong>Over-pagina</strong>:  Hier staan alle persoonlijke informatie over mij.<br>
             Mijn CV is hier ook te vinden, en er is de mogelijkheid<br>
-            voor u om mijn CV te downloaden.<br>
+            voor u om mijn CV te downloaden.<br><br><br>
 
             <strong>Contactpagina</strong>:  via deze pagina kunt u contact met mij opnemen, <br>
-            ik kan dan ue berichten kijken en beantwoorden.<br>
+            ik kan dan ue berichten kijken en beantwoorden.<br><br><br>
 
             <strong>Projectenpagina</strong>:  Op deze pagina presenteer ik de projecten die ik eerder heb gemaakt.
             Ik kan ook meer toekomstige projecten toevoegen als ik er meer heb. Daarnaast is er een
@@ -495,8 +474,9 @@ margin-left: 1rem;
         <a href="https://www.linkedin.com/legal/professional-community-policies?openinweb=true"><img class="linked" src="https://banner2.cleanpng.com/20180417/ifw/avfn2u8al.webp" alt="LinkedIn"></a>
         <a href="#"><img class="insta" src="https://w7.pngwing.com/pngs/910/192/png-transparent-instagram-instagram-new-design-liner-round-social-media-instagram-new-icon.png" alt="Instagram"></a>
         <a href="https://www.tiktok.com/@roro.mari22?_t=8q5sxdJ7iMd&_r=1" target="_blank"><img class="tik" src="https://w7.pngwing.com/pngs/483/249/png-transparent-tiktok-icon-thumbnail.png" alt="TikTok"></a>
+        <a href="https://github.com/ramame2" target="_blank"><img class="github" src="github.png" alt="Github"></a>
     </div>
-    <p>&copy; 2024 Rama Mari - Alle rechten voorbehouden</p>
+    <p>&copy; 2024 Rama Mari</p>
 </footer>
 
 </body>
