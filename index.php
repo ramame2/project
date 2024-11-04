@@ -85,7 +85,7 @@ if (!isset($_SESSION['user_id'])) {
             width:63%;
             height: 70%;
             border: #4a7fe2 2px solid;
-            border-radius: 8rem;
+            border-radius: 5rem;
             margin-top: -3rem;
             margin-left: auto;
         }
@@ -453,12 +453,12 @@ if (!isset($_SESSION['user_id'])) {
     <div class="container3">
         <h3> Welke secties bevat mijn portfolio?</h3>
         <p class="p2">
-            <strong>Over-pagina</strong>:  Hier staan alle persoonlijke informatie over mij.<br>
+            <strong>Over mij-pagina</strong>:  Hier staan alle persoonlijke informatie over mij.<br>
             Mijn CV is hier ook te vinden, en er is de mogelijkheid<br>
             voor u om mijn CV te downloaden.<br><br><br>
 
             <strong>Contactpagina</strong>:  via deze pagina kunt u contact met mij opnemen, <br>
-            ik kan dan ue berichten kijken en beantwoorden.<br><br><br>
+            ik kan dan uw berichten kijken en beantwoorden.<br><br><br>
 
             <strong>Projectenpagina</strong>:  Op deze pagina presenteer ik de projecten die ik eerder heb gemaakt.
             Ik kan ook meer toekomstige projecten toevoegen als ik er meer heb. Daarnaast is er een
