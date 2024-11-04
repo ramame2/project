@@ -3,7 +3,7 @@
 session_start(); // Start a new session
 
 // Database connection
-$servername = "localhost";
+$servername = "sql211.infinityfree.com";
 $username = "if0_37327165";
 $password = "edKK6Cnyx66e";
 $dbname = "if0_37327165_rama";
