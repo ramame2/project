@@ -67,7 +67,61 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             margin: 0;
         }
 
+
+        .sociaal {
+            display: flex;
+            justify-content: center;
+            gap: 1.7rem;
+            margin-top: 1rem;
+            border-radius: 8rem;
+            margin-top: 0rem;
+            margin-left: 1rem;
+
+        }
         img {
+            justify-items: center;
+            width: 63%;
+            height: 70%;
+            border: #4a7fe2 2px solid;
+            border-radius: 8rem;
+            margin-top: 0rem;
+        }
+
+        .sociaal img {
+            width: 25px;
+            height: 25px;
+        }
+
+
+
+        button {
+            width: 100px;
+            margin: 1rem auto;
+            display: block;
+            border-radius: 2rem;
+            padding: 0.5rem;
+            font-size: 1rem;
+            background-color: #ffffff;
+            border: solid 1px cadetblue;
+            color: #30737e;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #30737e;
+            color: #ffffff;
+        }
+
+        h3 {
+            color: #dbe817;
+            font-size: 4rem;
+            margin-left: 4rem;
+            font-family: "Arabic Typesetting";
+            font-weight: ;
+        }
+
+        .mypic {
             width: 100%;
             max-width: 299px;
             height: auto;
@@ -139,13 +193,48 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             color: #efef16;
         }
 
-        @media screen and (max-width: 768px) {
+        #text-container {
+            width: 100%;
+            height: 3rem;
+            font-size: 2rem;
+            text-align: center;
+            color: #076afd;
+            font-family: "Lucida Bright";
+            margin-top: 2rem;
+        }
+
+
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 98%;
+            background-color: rgba(51, 51, 51, 0.53);
+            color: #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 1rem;
+            font-size: 0.9rem;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+
+        footer p {
+            margin: 0.3rem;
+            font-size: 1rem;
+            color: #d1d1d1;
+        }
+
+
+        @media screen and (max-width: 500px) {
             h1 {
                 font-size: 2.5rem;
             }
 
-            img {
-                max-width: 150px;
+            .mypic {
+                max-width: 145px;
+
             }
 
             .login-container {
@@ -153,53 +242,45 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
 
             .text h2 {
-                font-size: 1.5rem;
+                font-size: 1.3rem;
             }
 
             .text p {
                 font-size: 1rem;
             }
-        }
 
-        footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: #333;
-            color: #f0f0f0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            font-size: 0.9rem;
-            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
-        }
 
-        footer p {
-            margin: 0;
-        }
-
-        footer a {
-            color: #00aced;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-            color: #ffffff;
-        }
-
-        @media screen and (max-width: 600px) {
             footer {
-                flex-direction: column;
-                text-align: center;
-                padding: 1rem;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 98%;
+                background-color: rgba(51, 51, 51, 0.53);
+                color: #f0f0f0;
+                display: flex;
+                justify-content: space-between;
+                padding: 0.2rem 0.5rem;
+                font-size: 0.9rem;
+                box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
             }
+
 
             footer p {
-                margin: 0.5rem 0;
+                margin: 0rem;
+                font-size: 1rem;
+                color: #d1d1d1;
             }
+
+
+            .sociaal {
+                display: flex;
+                gap: 0.8rem;
+                margin-top: 0rem;
+            }
+
+
+        }
+
         }
     </style>
 </head>
@@ -207,6 +288,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <header>
     <h1>Rama Mari</h1>
 </header>
+
+<div id="text-container"></div>
+
+<script>
+    const text = "Hello!! Welcome to my portfolio!";
+    const textContainer = document.getElementById("text-container");
+    let index = 0;
+
+    function displayNextLetter() {
+        if (index < text.length) {
+            textContainer.innerHTML += text[index];
+            index++;
+            setTimeout(displayNextLetter, 100);
+        } else {
+
+            setTimeout(() => {
+                textContainer.innerHTML = "";
+                index = 0; //
+                displayNextLetter();
+            }, 2000);
+        }
+    }
+    displayNextLetter();
+</script>
 
 <div class="login-container">
     <form method="POST" action="">
@@ -223,7 +328,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </div>
 
 <div class="container2">
-    <img src="rm.jpg" alt="Profile Image">
+    <img class="mypic" src="rm.jpg" alt="Profile Image">
     <div class="text">
         <h2>Hello,<br> welcome to my portfolio</h2>
         <p>
@@ -233,11 +338,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </p>
     </div>
 </div>
-<br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
+
 <footer>
-    <p>Email: <a href="mailto:eng.rama.me@gmail.com">eng.rama.me@gmail.com</a></p>
-    <p>Telefoonnummer: <a href="tel:06*******">06*********</a></p>
-    <p>&copy; 2024 Rama Mari - Alle rechten voorbehouden</p>
+    <div class="sociaal">
+        <a href="https://www.facebook.com/engrama.merea" target="_blank"><img class="face" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSskbpEX-jqvW2ZslvzHgvtEKykib-oCRvCPA&s" alt="Facebook"></a>
+        <a href="https://www.linkedin.com/legal/professional-community-policies?openinweb=true"><img class="linked" src="https://banner2.cleanpng.com/20180417/ifw/avfn2u8al.webp" alt="LinkedIn"></a>
+        <a href="#"><img class="insta" src="https://w7.pngwing.com/pngs/910/192/png-transparent-instagram-instagram-new-design-liner-round-social-media-instagram-new-icon.png" alt="Instagram"></a>
+        <a href="https://www.tiktok.com/@roro.mari22?_t=8q5sxdJ7iMd&_r=1" target="_blank"><img class="tik" src="https://w7.pngwing.com/pngs/483/249/png-transparent-tiktok-icon-thumbnail.png" alt="TikTok"></a>
+        <a href="https://github.com/ramame2" target="_blank"><img class="github" src="github.png" alt="Github"></a>
+    </div>
+    <p>&copy; 2024 Rama Mari</p>
 </footer>
+
 </body>
 </html>
