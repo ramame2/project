@@ -226,7 +226,7 @@ $conn->close();
             justify-content: center;
             margin: auto;
             color: #1aa9c1;
-            font-size: 2.5rem;
+            font-size: 2.2rem;
 
         }
 
