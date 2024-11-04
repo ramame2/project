@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 if (!isset($_SESSION['user_id'])) {
@@ -68,6 +69,14 @@ if (!isset($_SESSION['user_id'])) {
             gap: 2rem;
             padding: 2rem 0;
             margin:auto 0;
+
+        }
+
+        #text-container{
+            margin: auto;
+            color: #0f3efb;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
 
         }
 
@@ -181,7 +190,7 @@ if (!isset($_SESSION['user_id'])) {
 
             .items {
                 display: none;
-                background-color: rgba(244, 233, 233, 0.58);
+                background-color: rgb(108, 102, 102);
                 position: fixed;
                 top: 85px;
                 right: 62px;
@@ -332,7 +341,7 @@ if (!isset($_SESSION['user_id'])) {
                 .mypic {
 
                     border: #4a7fe2 1px solid;
-                    margin-top: -3rem;
+                    margin-top: -2rem;
                     margin-left: 8rem;
                     width: 14rem;
                     height: 14rem;
@@ -347,6 +356,8 @@ if (!isset($_SESSION['user_id'])) {
                 }
 
                 #text-container{
+                    margin: auto;
+                    color: #0f3efb;
                     font-size: 1.5rem;
                     margin-bottom: 1.5rem;
 
@@ -375,7 +386,6 @@ if (!isset($_SESSION['user_id'])) {
 
 <body>
 
-
 <div id="text-container"></div>
 
 <script>
@@ -387,7 +397,7 @@ if (!isset($_SESSION['user_id'])) {
         if (index < text.length) {
             textContainer.innerHTML += text[index];
             index++;
-            setTimeout(displayNextLetter, 100);
+            setTimeout(displayNextLetter, 200);
         } else {
 
             setTimeout(() => {
@@ -410,7 +420,6 @@ if (!isset($_SESSION['user_id'])) {
     <a class="projecten" href="projecten.php" target="_self">📚 Projecten </a>
 </div>
 
-<!--toggle menu -->
 <script>
     function toggleMenu() {
         const menuItems = document.getElementById("menuItems");
