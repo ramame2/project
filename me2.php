@@ -6,7 +6,7 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 // Database connection
-$servername = "sql211.infinityfree.com";
+$servername = "localhost";
 $username = "if0_37327165";
 $password = "edKK6Cnyx66e";
 $dbname = "if0_37327165_rama";
@@ -63,8 +63,8 @@ $conn->close();
             margin: 50px auto;
             padding: 20px;
             background: white;
+            box-shadow: 0 4px 8px rgba(0, 217, 255, 0.79);
             border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             border-left: 5px solid #0c0c0c;
             transition: background-color 0.3s, box-shadow 0.3s;
         }
@@ -125,7 +125,7 @@ $conn->close();
         }
         .container.dark-mode {
             background: #2c2c2c;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 4px 8px rgba(0, 217, 255, 0.79);
             border-left: 5px solid #2a372b;
         }
         label.dark-mode {
@@ -138,20 +138,10 @@ $conn->close();
             background-color: #444;
             color: white;
         }
-        .sociaal {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-        .sociaal img {
-            width: 35px;
-            height: 35px;
-        }
         .map {
             width: 40%;
             height: 30%;
-            margin-top: -100px;
+            margin-top: -6rem;
             border-radius: 20px;
             margin-left: 3rem;
         }
@@ -166,14 +156,17 @@ $conn->close();
         .terug {
             display: block;
             text-align: center;
-            margin-top: 0rem;
-            color: #007BFF;
+            font-size: 1rem;
+            margin-top: 0;
+            margin-left: -5rem;
+            color: #066ddc;
         }
 
         .collapse-button {
             position: fixed;
             top: 1rem;
             right: 7rem;
+            width: 4rem;
             background-color: rgba(241, 250, 2, 0.69);
             color: #061ef6;
             font-size: 18px;
@@ -193,7 +186,7 @@ $conn->close();
 
         .items {
             display: none;
-            background-color: rgba(244, 233, 233, 0.58);
+            background-color: rgba(55, 46, 46, 0.58);
             position: fixed;
             top: 85px;
             right: 62px;
@@ -201,7 +194,7 @@ $conn->close();
             border-radius: 8px;
             width: 165px;
             height: 165px;
-            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
             z-index: 999;
             overflow: hidden;
         }
@@ -211,7 +204,7 @@ $conn->close();
             padding: 16px 20px;
             font-size: 18px;
             text-decoration: none;
-            color: rgb(16, 15, 15);
+            color: rgb(251, 249, 249);
             transition: background-color 0.3s ease, color 0.3s ease;
             font-weight: 500;
         }
@@ -223,10 +216,11 @@ $conn->close();
         }
 
         #text-container{
+            display: flex;
+            justify-content: center;
             margin: auto;
-            color: #0f3efb;
+            color: #1aa9c1;
             font-size: 2.5rem;
-            margin-bottom: 1.5rem;
 
         }
 
@@ -239,15 +233,14 @@ $conn->close();
             color: #f0f0f0;
             display: flex;
             justify-content: space-between;
-            padding: 1rem 1rem;
-            font-size: 0.9rem;
+            padding: 1rem 0.3rem;
+            font-size: 1rem;
             box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
         }
 
 
         footer p {
             margin: 0.3rem;
-            font-size: 1rem;
             color: #d1d1d1;
         }
 
@@ -258,7 +251,6 @@ $conn->close();
             gap: 1.7rem;
             margin-top: 1rem;
             border-radius: 8rem;
-            margin-top: 0rem;
             margin-left: 1rem;
 
         }
@@ -268,7 +260,7 @@ $conn->close();
             height: 70%;
             border: #4a7fe2 2px solid;
             border-radius: 8rem;
-            margin-top: 0rem;
+            margin-top: 0;
         }
 
         .sociaal img {
@@ -281,36 +273,46 @@ $conn->close();
             h1 {
                 font-size: 2rem;
             }
+
             .container {
                 padding: 15px;
                 width: 90%;
                 margin: 20px auto;
             }
+
             #theme-toggle {
                 font-size: 0.9rem;
 
             }
+
             .map {
-                    width: 80%;
-                    height: 40%;
-                    margin-top: 0px;
-                    border-radius: 20px;
-                    margin-left: 3rem;
-                }
+                width: 80%;
+                height: 40%;
+                margin-top: 0;
+                border-radius: 20px;
+                margin-left: 3rem;
+
             }
+
             footer {
                 position: fixed;
                 background-color: rgba(51, 51, 51, 0.56);
                 color: #f0f0f0;
-                padding: 0.5rem 0rem;
+                padding: 0.3rem 0;
                 font-size: 0.5rem;
 
+            }
+            footer p {
+                margin-top: 0.6rem;
+                margin-right: 0.8rem;
+                font-size: 1rem;
+                color: #d1d1d1;
             }
 
             .sociaal {
                 display: flex;
-                gap: 1rem;
-                margin-top: 0rem;
+                gap: 0.6rem;
+                margin-top: 0.5rem;
             }
 
 
@@ -322,29 +324,36 @@ $conn->close();
             }
 
 
+            .terug {
+                font-size: 1rem;
+                margin-top: 0.5rem;
+                margin-left: -1.2rem;
+                color: #066ddc;
+            }
+
             h3 {
                 color: #dbe817;
                 font-size: 2rem;
                 margin-left: 1rem;
-                font-family: "Arabic Typesetting";
+                font-family: "Arabic Typesetting", serif;
                 font-weight: ;
             }
 
 
             .collapse-button {
                 position: fixed;
+                width: 3rem;
                 top: 1rem;
                 right: 1.5rem;
                 background-color: #defd10;
                 color: #0f3efb;
                 font-size: 15px;
-                padding: 10px 12px;
+                padding: 18px 12px;
                 border: cadetblue solid;
                 cursor: pointer;
                 z-index: 1000;
-                border-radius: 29px;
+                border-radius: 24px;
                 transition: background-color 0.3s ease;;
-                width: 5rem;
             }
 
             .items {
@@ -353,33 +362,36 @@ $conn->close();
                 position: fixed;
                 top: 60px;
                 right: 12px;
-                border: 1px solid rgba(221, 221, 221, 0.6);
+                border: 1px solid rgba(37, 30, 30, 0.6);
                 border-radius: 8px;
                 width: 200px;
-                box-shadow: 0px 8px 16px rgba(152, 144, 43, 0.27);
+                box-shadow: 0 8px 16px rgba(152, 144, 43, 0.27);
                 z-index: 999;
                 overflow: hidden;
             }
 
             p {
                 text-align: center;
-                font-size: 1.3rem ;
+                font-size: 1.3rem;
                 margin-top: 1.5rem;
-                margin-left: 0rem;
+                margin-left: 0;
 
             }
 
-            #text-container{
+            #text-container {
+                justify-content: left;
+
                 font-size: 1.5rem;
                 margin-top: 1.5rem;
-                margin-left: 1rem;
+                margin-left: 4rem;
 
             }
+        }
     </style>
 </head>
 <body>
 <div id="text-container"></div>
-<button id="theme-toggle" onclick="toggleTheme()">Dark Mode</button>
+<button id="theme-toggle" onclick="toggleTheme()">🌙🔆</button>
 <header>
     <h1>Contact</h1>
 </header>
@@ -401,9 +413,9 @@ $conn->close();
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.000123130496!2d5.219589076524773!3d52.37041777202225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c616e13959b029%3A0xe04f21626e2f3f0e!2sWindesheim%20in%20Almere!5e0!3m2!1sen!2snl!4v1730371721315!5m2!1sen!2snl"
                 frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-<br><br><br>
+
     </div>
-<br><br><br><br><br><br><br><br><br>
+<br><br><br><br>
 
 <footer>
     <div class="sociaal">
@@ -414,7 +426,7 @@ $conn->close();
         <a href="https://github.com/ramame2" target="_blank"><img class="github" src="github.png" alt="Github"></a>
     </div>
     <div>
-        <a class="terug" href="index.php" target="_self">TERUG NAAR HOMEPAGINA</a>
+        <a class="terug" href="index.php" target="_self">HOMEPAGINA</a>
     </div>
     <p>&copy; 2024 Rama Mari</p>
 </footer>
@@ -435,7 +447,7 @@ $conn->close();
         inputs.forEach(input => input.classList.toggle("dark-mode"));
 
         const themeToggle = document.getElementById("theme-toggle");
-        themeToggle.textContent = body.classList.contains("dark-mode") ? "🔆" : "Dark";
+        themeToggle.textContent = body.classList.contains("dark-mode") ? "🔆" : "🌙";
     }
 </script>
 
@@ -450,7 +462,7 @@ $conn->close();
         if (index < text.length) {
             textContainer.innerHTML += text[index];
             index++;
-            setTimeout(displayNextLetter, 100);
+            setTimeout(displayNextLetter, 200);
         } else {
 
             setTimeout(() => {
@@ -473,7 +485,7 @@ $conn->close();
     <a class="projecten" href="projecten.php" target="_self">📚 Projecten </a>
 </div>
 
-<!--toggle menu -->
+
 <script>
     function toggleMenu() {
         const menuItems = document.getElementById("menuItems");
