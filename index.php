@@ -350,7 +350,7 @@ if (!isset($_SESSION['user_id'])) {
                 p {
                     text-align: left;
                     font-size: 1.3rem ;
-                    margin-top: 12.5rem;
+                    margin-top: 12.9rem;
                     margin-left: -21rem;
                     width: %;
                 }
@@ -456,7 +456,7 @@ if (!isset($_SESSION['user_id'])) {
 
 
     <div class="container3">
-        <h3> Welke secties bevat mijn portfoilio?</h3>
+        <h3> Welke secties bevat mijn portfolio?</h3>
         <p class="p2">
             <strong>Over-pagina</strong>:  Hier staan alle persoonlijke informatie over mij.<br>
             Mijn CV is hier ook te vinden, en er is de mogelijkheid<br>
