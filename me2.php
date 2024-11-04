@@ -139,11 +139,17 @@ $conn->close();
             color: white;
         }
         .map {
-            width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.01rem;
+            padding: 0.5rem;
+            width: 80%;
+            max-width: 800px;
+            margin: auto;
             height: 30%;
-            margin-top: -6rem;
+            position: relative;
             border-radius: 20px;
-            margin-left: 3rem;
         }
         #theme-toggle {
             margin-top: 1rem;
@@ -286,11 +292,9 @@ $conn->close();
             }
 
             .map {
-                width: 80%;
+                width: 96%;
                 height: 40%;
-                margin-top: 0;
                 border-radius: 20px;
-                margin-left: 3rem;
 
             }
 
