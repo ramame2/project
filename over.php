@@ -152,7 +152,7 @@ $conn->close();
             display: none;
             background-color: rgb(42, 88, 96);
             position: fixed;
-            top: 75px;
+            top: 64px;
             right: 62px;
             border: 1px solid rgba(221, 221, 221, 0.27);
             border-radius: 8px;
