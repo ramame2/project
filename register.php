@@ -124,7 +124,6 @@ try {
             gap: 1.7rem;
             margin-top: 1rem;
             border-radius: 8rem;
-            margin-top: 0rem;
             margin-left: 1rem;
 
         }
@@ -134,7 +133,7 @@ try {
             height: 70%;
             border: #4a7fe2 2px solid;
             border-radius: 8rem;
-            margin-top: 0rem;
+            margin-top: 0;
         }
 
         .sociaal img {
@@ -197,7 +196,7 @@ try {
                 position: fixed;
                 background-color: rgba(51, 51, 51, 0.56);
                 color: #f0f0f0;
-                padding: 0.5rem 0rem;
+                padding: 0.5rem 0;
                 font-size: 0.5rem;
 
             }
@@ -205,7 +204,7 @@ try {
             .sociaal {
                 display: flex;
                 gap: 1rem;
-                margin-top: 0rem;
+                margin-top: 0;
             }
 
 
