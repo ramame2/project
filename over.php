@@ -5,7 +5,7 @@ $password = "edKK6Cnyx66e";
 $dbname = "if0_37327165_rama";
 
 
-// Create connection
+
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
@@ -13,16 +13,6 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT name, email, phone, experience, cv_file FROM cv";
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
-        echo '<a href="data:application/pdf;base64,' . base64_encode($row['cv_file']) . '" download="CV">Download mijn CV</a>';
-    }
-} else {
-    echo "0 results";
-}
 $conn->close();
 ?>
 
@@ -32,8 +22,10 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Over - Rama Mari</title>
+    <title>Over mij</title>
     <link rel="icon" href="my.ico" type="image/x-icon">
+
+</head>
     <style>
         :root {
             --bg-color-light: #f0f0f0; --text-color-light: #333;
@@ -53,15 +45,20 @@ $conn->close();
         }
 
         header {
-            text-align: center; padding: 20px;
-            transition: background 0.3s; width: 15rem; margin-left: 38rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.01rem;
+            padding: 0.5rem;
+            width: 50%;
+            margin: auto;
         }
 
         header h1 {
             font-size: 3rem;
             font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            font-weight: bold; margin: 0; color:cadetblue;
-            margin-top: -3rem;
+            font-weight: bold; color:cadetblue;
+            margin-top: 1rem;
         }
 
         .content {
@@ -75,6 +72,7 @@ $conn->close();
             border: none; border-radius: 8px;
             cursor: pointer; color: #fff;
             background-color: #1c454c; transition: background-color 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 217, 255, 0.79);
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
 
@@ -91,6 +89,7 @@ $conn->close();
             border-radius: 8px; margin-top: 10px;
             font-size: 1rem;
             color: white;background-color: #1c454c; width: 80%;
+            box-shadow: 0 4px 8px rgba(0, 217, 255, 0.79);
             max-width: 400px; border: 1px solid #fff;
         }
 
@@ -103,41 +102,167 @@ $conn->close();
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
 
-        .toggle-container {
-            margin-left: 83rem;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            width: 1rem;
-        }
+
         #theme-toggle {
+
             padding: 0.5rem 1rem;
-            background-color: white; color: black; font-weight: bold; font-size: 0.8rem;
-            border: solid black; border-radius: 20px; cursor: pointer; transition: background-color 0.3s, color 0.3s;
-            margin-left: 45rem; width: 8.7rem;
-             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        }
-        a{
-            margin-left: 2rem;
+            background-color: white;
+            margin-top: -1rem;
+            color: black;
+            font-weight: bold;
+            font-size: 0.8rem;
+            border: solid black;
+            transition: background-color 0.3s, color 0.3s;
+            width: 4.7rem;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            font-size: x-large;
+            margin-left: 2rem;
+            text-align: center;
+            border-radius: 2rem;
+        }
+        .terug {
+            text-align: center;
+            margin-left: -8rem;
+            font-size: 1rem;
+            color: #066ddc;
         }
 
-        .terug{
-            margin-left: 2rem;
-        color: #007BFF;
+        .collapse-button {
+            width: 6rem;
+            position: fixed;
+            top: 1rem;
+            right: 7rem;
+            background-color: rgba(28, 69, 76, 0.82);
+            color: #061ef6;
+            font-size: 18px;
+            padding: 1px 1px;
+            border: cadetblue solid;
+            cursor: pointer;
+            z-index: 1000;
+            border-radius: 98px;
+            transition: background-color 0.3s ease;;
+        }
 
-        font-size: 1rem;}
+
+        .collapse-button:hover {
+            background-color: #3f72a5;
+        }
+
+
+        .items {
+            display: none;
+            background-color: rgb(42, 88, 96);
+            position: fixed;
+            top: 85px;
+            right: 62px;
+            border: 1px solid rgba(221, 221, 221, 0.27);
+            border-radius: 8px;
+            width: 165px;
+            height: 165px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            overflow: hidden;
+        }
+
+        .items a {
+            display: block;
+            padding: 16px 20px;
+            font-size: 18px;
+            text-decoration: none;
+            color: rgb(251, 249, 249);
+            transition: background-color 0.3s ease, color 0.3s ease;
+            font-weight: 500;
+        }
+
+
+        .items a:hover {
+            background-color: rgba(92, 116, 205, 0.75);
+            color: #fff200;
+        }
+
+        #text-container{
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            color: #1aa9c1;
+            font-size: 2rem;
+
+        }
+        .cv-download-link{
+            display: inline-block;
+            text-decoration: none;
+            text-align: center;
+            margin-top: 1rem; width: 14rem;
+            font-size: 2rem; padding: 10px 20px;
+            border: none; border-radius: 8px;
+            cursor: pointer; color: #fff;
+            background-color: #236671; transition: background-color 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 217, 255, 0.79);
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(51, 51, 51, 0.53);
+            color: #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 1rem;
+            font-size: 1rem;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+
+        footer p {
+            margin: 0.3rem 1rem 0.3rem 0.3rem;
+            font-size: 1rem;
+            color: #d1d1d1;
+        }
+
+
+        .sociaal {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            border-radius: 8rem;
+            margin-top: 0;
+            margin-left: 1rem;
+
+        }
+        img {
+            justify-items: center;
+            width: 63%;
+            height: 70%;
+            border: #4a7fe2 2px solid;
+            border-radius: 8rem;
+            margin-top: 0;
+        }
+
+        .sociaal img {
+            width: 25px;
+            height: 25px;
+        }
+
 
         .d{
             height: 7rem;}
 
-        @media screen and (min-width: 320px) and (max-width: 1024px) {
+
+
+        @media screen and (max-width: 600px) {
+
 
             header {
-                width: 100%; margin-left: 0; padding: 10px;
+                width: 100%;
+                margin-left: 0;
+                padding: 10px;
             }
 
             header h1 {
-                font-size: 2rem; margin-top: 0;
+                font-size: 2rem;
+                margin-top: 0;
             }
 
             .content {
@@ -145,32 +270,115 @@ $conn->close();
             }
 
             .content button {
-                width: 100%; font-size: 1.5rem;
+                width: 100%;
+                font-size: 1.5rem;
                 padding: 15px;
             }
 
             #theme-toggle {
-                margin-left: 0; margin-top: 10px; width: 100%;
+                margin-left: 0;
+                margin-top: 10px;
+                width: 20%;
             }
 
-            .popup {
-                width: 100%; max-width: 100%;
+
+            footer {
+                position: fixed;
+                background-color: rgba(51, 51, 51, 0.56);
+                color: #f0f0f0;
+                padding: 0.5rem 0;
+                font-size: 0.5rem;
+
+            }
+            .terug {
+                align-items: center;
+                margin-left: 0.6rem;
+                font-size: 0.9rem;
+                margin-top: 1rem;
+                color: #066ddc;
             }
 
-            footer .terug {
-                display: block; text-align: center;
-                font-size: 1rem; margin-top: 20px;
+            .sociaal {
+                display: flex;
+                gap: 1rem;
+                margin-top: 0;
+            }
+
+
+            img {
+
+                border: #ddf405 1px solid;
+                border-radius: 8rem;
+
+            }
+
+
+
+            .collapse-button {
+                position: fixed;
+                top: 1rem;
+                right: 1.5rem;
+                background-color: #defd10;
+                color: #0f3efb;
+                font-size: 15px;
+                padding: 10px 12px;
+                border: cadetblue solid;
+                cursor: pointer;
+                z-index: 1000;
+                border-radius: 29px;
+                transition: background-color 0.3s ease;;
+                width: 5rem;
+            }
+
+            .items {
+                display: none;
+                background-color: rgba(48, 42, 42, 0.75);
+                position: fixed;
+                top: 60px;
+                right: 12px;
+                border: 1px solid rgba(221, 221, 221, 0.6);
+                border-radius: 8px;
+                width: 200px;
+                box-shadow: 0 8px 16px rgba(152, 144, 43, 0.27);
+                z-index: 999;
+                overflow: hidden;
+            }
+
+            p {
+                text-align: center;
+                font-size: 1.2rem;
+                margin-top: 1.5rem;
+                margin-left: 1rem;
+
+            }
+
+            #text-container {
+                font-size: 1.5rem;
+                margin-top: 1.5rem;
+                margin-left: 1rem;
+
             }
         }
     </style>
 
 
-</head>
+
+
+
 <body class="light-mode">
-<header>
-    <h1>Rama Mari</h1>
-    <button id="theme-toggle" onclick="toggleTheme()">Dark/light mood</button>
-</header>
+<div>
+    <header>
+        <h1>Rama Mari</h1>
+
+    </header>
+    <div id="text-container"></div>
+</div>
+<div>
+
+    <button id="theme-toggle" onclick="toggleTheme()">🌙🔆</button>
+
+</div>
+
 
 <div class="content">
     <button onclick="togglePopup('skillsPopup')">Vaardigheden</button>
@@ -195,10 +403,66 @@ $conn->close();
     <div id="hobbiesPopup" class="popup">
         <p>Ik hou van sporten, tekenen, koken, en films kijken.</p>
     </div>
+
+    <?php
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    $sql = "SELECT name, email, phone, experience, cv_file FROM cv";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+            echo '<a href="data:application/pdf;base64,' . base64_encode($row['cv_file']) . '" download="CV" class="cv-download-link">📄 Mijn CV </a>';
+        }
+    } else {
+        echo "0 results";
+    }
+    $conn->close();
+    ?>
+
+
 </div>
 <div class="d">
 
 </div>
+
+<div>
+    <button class="collapse-button" onclick="toggleMenu()">☰</button>
+
+</div>
+
+
+
+<div class="items" id="menuItems">
+    <a class="Contact" href="me2.php" target="_self">📨 Contact </a>
+    <a class="over" href="over.php" target="_self">️📑 Over mij</a>
+    <a class="projecten" href="projecten.php" target="_self">📚 Projecten </a>
+</div>
+
+</body>
+<script>
+    function toggleMenu() {
+        const menuItems = document.getElementById("menuItems");
+        menuItems.style.display = (menuItems.style.display === "block") ? "none" : "block";
+    }
+
+
+    window.onclick = function(event) {
+        const menuItems = document.getElementById("menuItems");
+        if (!event.target.matches('.collapse-button')) {
+            if (menuItems.style.display === "block") {
+                menuItems.style.display = "none";
+            }
+        }
+    }
+</script>
+
 <script>
     function toggleTheme() {
         const body = document.body;
@@ -206,9 +470,9 @@ $conn->close();
 
         const themeToggle = document.getElementById("theme-toggle");
         if (body.classList.contains("dark-mode")) {
-            themeToggle.textContent = "Dark/light mood";
+            themeToggle.textContent = "🔆";
         } else {
-            themeToggle.textContent = "Dark/light mood";
+            themeToggle.textContent = "🌙";
         }
     }
     function togglePopup(popupId) {
@@ -217,72 +481,45 @@ $conn->close();
     }
 </script>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mijn Portfolio</title>
-<link rel="icon" href="my.ico" type="image/x-icon">
-<style>
-
-    /* Main content container */
-    .content {
-        flex: 1;
-    }
 
 
-    footer {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background-color: #333;
-        color: #f0f0f0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 2rem;
-        font-size: 0.9rem;
-        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
-    }
+<script>
+    const text = "Hello!! Welcome to my portfolio!";
+    const textContainer = document.getElementById("text-container");
+    let index = 0;
 
-    /* Footer content styling */
-    footer p {
-        margin: 0;
-        font-size: 1rem;
-        color: #d1d1d1;
-    }
+    function displayNextLetter() {
+        if (index < text.length) {
+            textContainer.innerHTML += text[index];
+            index++;
+            setTimeout(displayNextLetter, 100);
+        } else {
 
-    footer a {
-        color: #00aced;
-        text-decoration: none;
-        font-weight: 500;
-    }
-
-    footer a:hover {
-        text-decoration: underline;
-        color: #ffffff;
-    }
-
-    /* Media query for smaller screens */
-    @media screen and (max-width: 600px) {
-        footer {
-            flex-direction: column;
-            text-align: center;
-            padding: 1rem;
-        }
-
-        footer p {
-            margin: 0.5rem 0;
+            setTimeout(() => {
+                textContainer.innerHTML = "";
+                index = 0; //
+                displayNextLetter();
+            }, 2000);
         }
     }
-</style>
-<div class="content">
-    <!-- Main content here -->
-</div>
+    displayNextLetter();
+</script>
+
 
 <footer>
-    <a class="terug" href="index.php" target="_self"> TERUG NAAR HOMEPAGINA</a>
-    <p>&copy; 2024 Rama Mari - Alle rechten voorbehouden</p>
+    <div class="sociaal">
+        <a href="https://www.facebook.com/engrama.merea" target="_blank"><img class="face" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSskbpEX-jqvW2ZslvzHgvtEKykib-oCRvCPA&s" alt="Facebook"></a>
+        <a href="https://www.linkedin.com/legal/professional-community-policies?openinweb=true"><img class="linked" src="https://banner2.cleanpng.com/20180417/ifw/avfn2u8al.webp" alt="LinkedIn"></a>
+        <a href="#"><img class="insta" src="https://w7.pngwing.com/pngs/910/192/png-transparent-instagram-instagram-new-design-liner-round-social-media-instagram-new-icon.png" alt="Instagram"></a>
+        <a href="https://www.tiktok.com/@roro.mari22?_t=8q5sxdJ7iMd&_r=1" target="_blank"><img class="tik" src="https://w7.pngwing.com/pngs/483/249/png-transparent-tiktok-icon-thumbnail.png" alt="TikTok"></a>
+        <a href="https://github.com/ramame2" target="_blank"><img class="github" src="github.png" alt="Github"></a>
+    </div>
+    <div>
+        <a class="terug" href="index.php" target="_self">HOMEPAGINA</a>
+    </div>
+    <p>&copy; 2024 Rama Mari</p>
 </footer>
+
 
 </body>
 </html>
