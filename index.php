@@ -27,7 +27,7 @@ if (!isset($_SESSION['user_id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mijn Portfolio</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="">
     <link rel="icon" href="my.ico" type="image/x-icon">
 
 </head>
@@ -105,7 +105,6 @@ if (!isset($_SESSION['user_id'])) {
             gap: 1.7rem;
             margin-top: 1rem;
             border-radius: 8rem;
-            margin-top: 0rem;
             margin-left: 1rem;
 
         }
@@ -115,7 +114,7 @@ if (!isset($_SESSION['user_id'])) {
             height: 70%;
             border: #4a7fe2 2px solid;
             border-radius: 8rem;
-            margin-top: 0rem;
+            margin-top: 0;
         }
 
             .sociaal img {
@@ -148,7 +147,7 @@ if (!isset($_SESSION['user_id'])) {
                 color: #dbe817;
                 font-size: 4rem;
                 margin-left: 4rem;
-                font-family: "Arabic Typesetting";
+                font-family: "Arabic Typesettini", serif;
 
             }
 
@@ -198,7 +197,7 @@ if (!isset($_SESSION['user_id'])) {
                 border-radius: 8px;
                 width: 165px;
                 height: 165px;
-                box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
                 z-index: 999;
                 overflow: hidden;
             }
@@ -258,7 +257,7 @@ if (!isset($_SESSION['user_id'])) {
                     position: fixed;
                     background-color: rgba(51, 51, 51, 0.56);
                     color: #f0f0f0;
-                    padding: 0.5rem 0rem;
+                    padding: 0.5rem 0;
                     font-size: 0.5rem;
 
                 }
@@ -266,7 +265,7 @@ if (!isset($_SESSION['user_id'])) {
                 .sociaal {
                     display: flex;
                     gap: 1rem;
-                    margin-top: 0rem;
+                    margin-top: 0;
                 }
 
 
@@ -282,7 +281,7 @@ if (!isset($_SESSION['user_id'])) {
                     color: #dbe817;
                     font-size: 2rem;
                     margin-left: 1rem;
-                    font-family: "Arabic Typesetting";
+                    font-family: "Arabic Typesetting", serif;
 
                 }
 
@@ -328,7 +327,7 @@ if (!isset($_SESSION['user_id'])) {
                 }
 
                 .container2 {
-                    margin-left: 0rem;
+                    margin-left: 0;
                     width: 100%;
                     height: 28rem;
                 }
@@ -468,9 +467,7 @@ if (!isset($_SESSION['user_id'])) {
 
 
     </div>
-<br><br><br>
-</div>
-</div>
+<br><br>
 
 <footer>
     <div class="sociaal">
