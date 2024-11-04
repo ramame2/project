@@ -224,7 +224,7 @@ $conn->close();
         #text-container{
             display: flex;
             justify-content: center;
-            margin-top: 1rem;
+            margin-top: 2rem;
             color: #1aa9c1;
             font-size: 2.2rem;
 
