@@ -194,7 +194,7 @@ $conn->close();
             display: none;
             background-color: rgba(55, 46, 46, 0.58);
             position: fixed;
-            top: 75px;
+            top: 65px;
             right: 62px;
             border: 1px solid rgba(221, 221, 221, 0.27);
             border-radius: 8px;
