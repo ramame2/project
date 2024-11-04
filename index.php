@@ -149,7 +149,7 @@ if (!isset($_SESSION['user_id'])) {
                 font-size: 4rem;
                 margin-left: 4rem;
                 font-family: "Arabic Typesetting";
-                font-weight: ;
+
             }
 
             .container3 {
@@ -253,11 +253,6 @@ if (!isset($_SESSION['user_id'])) {
             }
 
 
-            h3{
-                font-size: 3rem;
-                margin-left: 5rem;
-            }
-
             @media only screen and (max-device-width: 500px) {
                 footer {
                     position: fixed;
@@ -288,7 +283,7 @@ if (!isset($_SESSION['user_id'])) {
                     font-size: 2rem;
                     margin-left: 1rem;
                     font-family: "Arabic Typesetting";
-                    font-weight: ;
+
                 }
 
 
